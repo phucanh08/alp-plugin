@@ -16,18 +16,18 @@ Use for runtime bugs, regressions, and failing tests.
 
 ## Step-by-step
 1. Reproduce and summarize issue context
-2. Run debug flow: `/alp:debug "<issue>"` or `/alp:plan "fix <issue>"`
+2. Run fix plan flow: `/alp:plan "fix <issue>"`
 3. Implement minimal fix
 4. Run validation tests: `/alp:test`
 5. Confirm no regressions via review: `/alp:review:codebase "check bug fix impact"`
 
 ## Command sequence
-- `/alp:debug "..."`
+- `/alp:plan "fix <issue>"`
 - `/alp:test`
 - `/alp:review:codebase "..."`
 
 ## Example prompt(s)
-- `/alp:debug "login API returns 500 when token is expired"`
+- `/alp:plan "fix login API returns 500 when token is expired"`
 
 ## Expected output
 - Root-cause hypothesis
