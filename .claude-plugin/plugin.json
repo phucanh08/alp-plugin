@@ -1,0 +1,10 @@
+{
+  "name": "alp-plugin",
+  "description": "Personal engineering plugin — skills, agents, workflows for daily development",
+  "version": "1.0.0",
+  "author": {
+    "name": "phucanh08",
+    "email": "phucanhdn01@gmail.com"
+  },
+  "license": "MIT"
+}

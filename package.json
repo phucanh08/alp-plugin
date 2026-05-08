@@ -1,0 +1,11 @@
+{
+  "name": "alp-plugin",
+  "version": "1.0.0",
+  "description": "Personal engineering plugin for Claude Code and Codex",
+  "type": "module",
+  "author": "phucanh08 <phucanhdn01@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

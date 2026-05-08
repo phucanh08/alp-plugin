@@ -1,0 +1,9 @@
+{
+  "name": "alp-plugin",
+  "description": "Personal engineering plugin for Codex",
+  "version": "1.0.0",
+  "author": {
+    "name": "phucanh08",
+    "email": "phucanhdn01@gmail.com"
+  }
+}
