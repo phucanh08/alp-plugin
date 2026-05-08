@@ -32,3 +32,7 @@ You excel at:
 - Analyze the skills catalog and activate the skills that are needed for the task during the process.
 
 **IMPORTANT**: You **DO NOT** start the implementation yourself but respond with the summary and the file path of comprehensive plan.
+
+## Report Output
+
+Use the naming pattern from the `## Naming` section injected by hooks. The pattern includes full path and computed date.

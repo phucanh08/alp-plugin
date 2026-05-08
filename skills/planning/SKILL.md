@@ -1,6 +1,6 @@
 ---
 name: planning
-description: Use when you need to plan technical solutions that are scalable, secure, and maintainable.
+description: Plan implementations, design architectures, create technical roadmaps with detailed phases. Use for feature planning, system design, solution architecture, implementation strategy, phase documentation.
 license: MIT
 ---
 
@@ -58,10 +58,23 @@ Load: `references/output-standards.md`
 - Provide multiple options with trade-offs when appropriate
 - Fully respect the `./docs/development-rules.md` file.
 
+## Task Integration (Optional)
+
+When session has `CLAUDE_CODE_TASK_LIST_ID` set (active plan):
+- Use TaskCreate to create tasks for each phase with clear subjects
+- Set dependencies: Phase N+1 `blockedBy` Phase N
+- Subagents coordinate via shared task list automatically
+- Use TaskUpdate to mark progress (in_progress → completed)
+
+### Important
+DO NOT create plans or reports in USER directory.
+ALWAYS create plans or reports in CURRENT WORKING PROJECT DIRECTORY.
+
 **Plan Directory Structure**
+IN CURRENT WORKING PROJECT DIRECTORY:
 ```
 plans/
-└── YYYYMMDD-HHmm-plan-name/
+└── {date}-plan-name/
     ├── research/
     │   ├── researcher-XX-report.md
     │   └── ...
@@ -75,6 +88,37 @@ plans/
     ├── phase-XX-phase-name-here.md
     └── ...
 ```
+
+## Active Plan State
+
+Prevents version proliferation by tracking current working plan via session state.
+
+### Active vs Suggested Plans
+
+Check the `## Plan Context` section injected by hooks:
+- **"Plan: {path}"** = Active plan, explicitly set via `set-active-plan.cjs` - use for reports
+- **"Suggested: {path}"** = Branch-matched, hint only - do NOT auto-use
+- **"Plan: none"** = No active plan
+
+### Rules
+
+1. **If "Plan:" shows a path**: Ask "Continue with existing plan? [Y/n]"
+2. **If "Suggested:" shows a path**: Inform user, ask if they want to activate or create new
+3. **If "Plan: none"**: Create new plan using naming from `## Naming` section
+4. **Update on create**: Run `node .claude/scripts/set-active-plan.cjs {plan-dir}`
+
+### Report Output Location
+
+All agents writing reports MUST:
+1. Check `## Naming` section injected by hooks for the computed naming pattern
+2. Active plans use plan-specific reports path
+3. Suggested plans use default reports path (not plan folder)
+
+### Important
+DO NOT create plans or reports in USER directory.
+ALWAYS create plans or reports in CURRENT WORKING PROJECT DIRECTORY.
+
+**Important:** Suggested plans do NOT get plan-specific reports - this prevents pollution of old plan folders.
 
 ## Quality Standards
 

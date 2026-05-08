@@ -41,12 +41,25 @@ Activate `planning` skill.
 
 ## Workflow
 
-- If the user provides a screenshots or videos, use `ai-multimodal` skill to describe as detailed as possible the issue, make sure copywriter can fully understand the issue easily based on the description.
+- If the user provides a screenshots or videos, use `ai-multimodal` skill to describe as detailed as possible the issue, make sure fullstack-developer can fully understand the issue easily based on the description.
 - If the user provides a URL, use `web_fetch` tool to fetch the content of the URL and analyze the current issues.
 - You can use screenshot capture tools along with `ai-multimodal` skill to capture screenshots of the exact parent container and analyze the current issues with the appropriate Gemini analysis skills (`ai-multimodal`, `gemini-video-understanding`, or `gemini-document-processing`).
 - Use `/scout:ext` (preferred) or `/scout` (fallback) slash command to search the codebase for files needed to complete the task
 - Use `planner` agent to create a comprehensive CRO plan following the progressive disclosure structure:
-  - Create a directory `plans/YYYYMMDD-HHmm-plan-name` (example: `plans/20251101-1505-authentication-and-profile-implementation`).
+  - Create a directory using naming pattern from `## Naming` section.
+  - Every `plan.md` MUST start with YAML frontmatter:
+    ```yaml
+    ---
+    title: "{Brief title}"
+    description: "{One sentence for card preview}"
+    status: pending
+    priority: P2
+    effort: {sum of phases, e.g., 4h}
+    branch: {current git branch}
+    tags: [cro, conversion]
+    created: {YYYY-MM-DD}
+    ---
+    ```
   - Save the overview access point at `plan.md`, keep it generic, under 80 lines, and list each phase with status/progress and links.
   - For each phase, add `phase-XX-phase-name.md` files containing sections (Context links, Overview with date/priority/statuses, Key Insights, Requirements, Architecture, Related code files, Implementation Steps, Todo list, Success Criteria, Risk Assessment, Security Considerations, Next steps).
   - Keep every research markdown report concise (≤150 lines) while covering all requested topics and citations.
