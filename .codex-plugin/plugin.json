@@ -6,5 +6,8 @@
     "name": "phucanh08",
     "email": "phucanhdn01@gmail.com"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/phucanh08/alp-plugin",
+  "homepage": "https://github.com/phucanh08/alp-plugin",
+  "keywords": ["opencode", "claude-code", "engineering", "workflows", "skills", "agents"]
 }
