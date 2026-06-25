@@ -1,12 +1,19 @@
 ---
-description: Analyze Github Actions logs and provide a plan to fix the issues
-argument-hint: [github-actions-url]
+name: alp:plan:ci
+description: "Analyze GitHub Actions logs and create a detailed plan to fix CI/CD issues."
+argument-hint: "[github-actions-url]"
+metadata:
+  author: anhlpkit
+  version: "1.0.0"
 ---
 
-Activate `planning` skill.
+# CI Plan
+
+Activate `alp:plan` skill.
 
 ## Github Actions URL
- $ARGUMENTS
+
+$ARGUMENTS
 
 Use the `planner` subagent to read the github actions logs, analyze and find the root causes of the issues, then provide a detailed plan for implementing the fixes.
 

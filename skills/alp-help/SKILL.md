@@ -1,7 +1,13 @@
 ---
-description: AnhlpKit usage guide - just type naturally
-argument-hint: [category|command|task description]
+name: alp:alp-help
+description: "AnhlpKit usage guide — find commands, workflows, and task recommendations by typing naturally."
+argument-hint: "[category|command|task description]"
+metadata:
+  author: anhlpkit
+  version: "1.0.0"
 ---
+
+# AnhlpKit Help
 
 Think harder.
 All-in-one AnhlpKit guide. Run the script and present output based on type markers.
@@ -53,20 +59,6 @@ Full documentation (config, schema, setup guides).
    - Common gotchas and tips ("Watch out for: ...")
    - Practical scenarios ("This is useful when...")
 3. End with a specific follow-up question
-
-**Example enhancement after showing full output:**
-```
-## Additional Tips
-
-**When to use global vs local config:**
-- Use global (~/.claude/.alp.json) for personal preferences like language, issue prefix style
-- Use local (./.claude/.alp.json) for project-specific paths, naming conventions
-
-**Common setup for teams:**
-Each team member sets their locale globally, but projects share local config via git.
-
-Need help setting up a specific configuration?
-```
 
 ### `@ALP_OUTPUT_TYPE:category-guide`
 
