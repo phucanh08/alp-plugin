@@ -1,6 +1,8 @@
 # Team Coordination Rules
 
-> These rules only apply when operating as a teammate within an Agent Team.
+> These rules apply to (a) **native** teammates within an Agent Team and (b) **csd-backend** workers
+> (`--harness codex|pi`, `--mixed`) driven by a lead. Sections below tagged for native teammates use
+> tools (`SendMessage`, `TaskUpdate`) that csd workers do NOT have — see "csd-Backend Workers".
 > They have no effect on standard sessions or subagent workflows.
 
 Rules for agents operating as teammates within an Agent Team.
@@ -88,3 +90,22 @@ When `plan_mode_required` is set:
 - Read team config at `~/.claude/teams/{team-name}/config.json` to discover teammates
 - Always refer to teammates by NAME (not agent ID)
 - Names are used for: `recipient` in SendMessage, task `owner` in TaskUpdate
+
+## csd-Backend Workers (non-native: `--harness codex|pi`, `--mixed`)
+
+These override the native assumptions above when the worker runs via csd (see
+`skills/team/references/csd-backend-driving.md` for mechanics):
+
+- **No peer messaging.** csd workers share ONLY disk files + JSONL event streams with the lead. The
+  "Communication Protocol" (SendMessage) section applies to **native teammates only**. The lead
+  relays ALL cross-worker information (e.g. debug adversarial challenges go lead → worker, not peer→peer).
+- **No shared task list.** `TaskUpdate`/`TaskList`/"Task Claiming" do not apply to csd workers. The lead
+  holds task state in its own context (`name|harness|cwd|status|report` table).
+- **Verify on disk, not prose.** csd workers may falsely report success. The lead confirms the actual
+  produced artifacts before accepting completion.
+- **No crash recovery** for codex/pi (no resume-by-id). A dead worker is relaunched from zero; the lead
+  reports lost work honestly rather than masking it.
+- **Codex not queryable until first `converse`** completes (launch ≠ ready).
+- **`--mixed`:** keep native pool (Agent Teams, this file's main rules) and csd pool (these rules) in
+  SEPARATE tracking namespaces. Never conflate. Lead mediates all cross-pool information.
+- **Teardown:** lead `stop`s every csd worker + runs `csd prune`; verifies `csd list` is empty.

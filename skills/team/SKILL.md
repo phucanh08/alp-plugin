@@ -1,19 +1,28 @@
 ---
 name: alp:team
-description: "Orchestrate Agent Teams for parallel multi-session collaboration. Use for research, implementation, review, and debug workflows requiring independent teammates."
-argument-hint: "<template> <context> [--devs|--researchers|--reviewers N] [--delegate]"
+description: "Orchestrate Agent Teams for parallel multi-session collaboration. Use for research, implementation, review, and debug workflows requiring independent teammates. Supports --harness codex|pi and --mixed (multi-model ensemble) via vendored claude-session-driver."
+argument-hint: "<template> <context> [--devs|--researchers|--reviewers N] [--delegate] [--harness claude|codex|pi] [--mixed claude,codex,...]"
 metadata:
   author: anhlpkit
-  version: "3.0.0"
+  version: "3.1.0"
 ---
 
 # Agent Teams - CK-Native Orchestration Engine
 
 Coordinate multiple independent Claude Code sessions. Each teammate has own context window, loads project context (CLAUDE.md, skills, agents), communicates via shared task list and messaging.
 
-**Requires:** Agent Teams enabled. Set `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` in settings.json env.
-**Requires:** CLI terminal — `TaskCreate`/`TaskUpdate`/`TaskGet`/`TaskList` and `TeamCreate`/`TeamDelete` are **disabled in VSCode extension** (`isTTY` check). Agent Teams CANNOT run in VSCode.
-**Model requirement:** All teammates must run Opus 4.6 (Agent Teams constraint).
+**Requires (native, default):** Agent Teams enabled — set `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` in
+settings.json env.
+**Requires (native):** CLI terminal — `TaskCreate`/`TaskUpdate`/`TaskGet`/`TaskList` and
+`TeamCreate`/`TeamDelete` are **disabled in VSCode extension** (`isTTY` check). Native Agent Teams
+CANNOT run in VSCode.
+**Requires (csd backend, `--harness codex|pi`/`--mixed`):** Node `>=22.12`, `tmux`, and the worker
+harness CLI authed (Codex: `~/.codex`; Pi: `~/.pi/agent`). Verify with
+`skills/team/scripts/csd-env-check.sh`. csd mode DOES run in VSCode (workers are external processes).
+**Model requirement:** **Native** Agent Teams teammates must run Opus 4.6 (Agent Teams constraint).
+This does NOT apply to csd workers (`--harness codex|pi`) -- they run their own harness/model (the
+cost-savings lever; codex model via `CSD_CODEX_MODEL`). csd-mode also runs where native cannot
+(incl. VSCode), since workers are external processes.
 
 ## Usage
 
@@ -28,6 +37,61 @@ Coordinate multiple independent Claude Code sessions. Each teammate has own cont
 - `--plan-approval` / `--no-plan-approval` -- plan gate (default: on for cook)
 - `--delegate` -- lead only coordinates, never touches code
 - `--worktree` -- use git worktrees for implementation isolation (default: on for cook)
+- `--harness claude|codex|pi` -- worker backend (default: `claude` = native Agent Teams)
+- `--mixed claude,codex,...` -- run native + csd backends simultaneously (research/review only)
+
+## Backend Selection
+
+`alp:team` has TWO backends. The flag picks the **whole** backend for a run -- do NOT interleave.
+
+| Flag | Backend | Workers driven via |
+|------|---------|--------------------|
+| `--harness claude` (default) | **Native Agent Teams** | `TeamCreate`/`TaskCreate`/`Agent`/`SendMessage` (unchanged) |
+| `--harness codex` \| `--harness pi` | **csd** (vendored) | `csd` CLI + JSONL event streams |
+| `--mixed claude,codex,...` | **Both, concurrently** | native pool + csd pool (see `## --mixed Mode`) |
+
+**csd pre-flight (MANDATORY when `--harness` != claude OR `--mixed` includes a non-claude harness):**
+1. Run `skills/team/scripts/csd-env-check.sh`. Last line is `CSD_ENV: PASS` or `CSD_ENV: FAIL`.
+2. `PASS` → proceed. `FAIL` → STOP and tell user the missing prerequisite (commonly `tmux` or
+   `~/.codex`), e.g. *"csd backend needs tmux: `brew install tmux`."* Do NOT silently continue.
+   (Exception: `--mixed` read-only degrade rule in `## --mixed Mode`.)
+3. Then follow **`references/csd-backend-driving.md`** for ALL worker operations (launch/converse/
+   wait-for-turn/read-events/status/stop/prune). It is self-contained.
+
+**csd backend invariants** (full detail in the reference doc -- enforce all):
+- Codex/Pi not queryable until first `converse` completes (launch ≠ ready).
+- **Verify artifacts on disk, never trust worker prose.**
+- csd workers **cannot peer-message** -- lead relays all cross-worker info.
+- No crash recovery for codex/pi (no resume-by-id) -- dead worker = relaunch from zero.
+- Coordination lives in lead context (no shared TaskList); keep a `name|harness|cwd|status|report` table.
+- Always tear down: `stop` each + `csd prune`; verify `csd list` empty.
+
+## --mixed Mode (native + csd concurrently)
+
+Runs a **native pool** (claude via Agent Teams) AND a **csd pool** (codex/pi) in one run, then
+cross-checks results across models. Strongest bias-reduction; highest complexity (two monitoring loops).
+
+**Scope gate (KISS):** `--mixed` is allowed for **`research` and `review` ONLY**. On `cook`/`debug`,
+**REJECT** with: *"--mixed supports research/review only (cook/debug need single backend)."*
+
+**Parse** `--mixed claude,codex,codex` → two pools:
+- `native[]` = claude entries → Agent Teams (`TeamCreate`/`TaskCreate`/`Agent`, monitor via `TaskCompleted`).
+- `csd[]` = codex/pi entries → `csd` CLI (monitor via `read-events --follow` / `status`).
+
+**Rules:**
+1. **csd worker cap = 3** in mixed mode (bound lead polling/relay overhead). Exceed → cap + warn.
+2. **Separate tracking namespaces.** Native = `TaskList`. csd = lead-maintained table. Never conflate.
+3. **Env-check degrade:** if `csd-env-check` FAILs in `--mixed`, do NOT hard-stop — **warn and continue
+   native-only** (research/review tolerate a missing pool). Report which pool was dropped.
+4. **Wait for BOTH pools** before synthesis. Lead reads all reports on disk (native + csd).
+5. **Synthesis must note model agreement/disagreement** (that's the ensemble value).
+6. **Partial failure:** if one pool dies (e.g. codex worker gone, no recovery), report partial synthesis
+   honestly + name the failed pool. Never silently drop a pool.
+7. **Teardown BOTH:** native → `shutdown_request` + `TeamDelete`; csd → `stop` each + `csd prune`.
+   Verify `TaskList` cleared AND `csd list` empty.
+
+Cost note: codex workers are cheap, but the Opus lead keeps spending while live-steering/polling both
+pools. `--mixed` buys ensemble quality, not token savings.
 
 ## Execution Protocol
 
@@ -41,6 +105,15 @@ Coordinate multiple independent Claude Code sessions. Each teammate has own cont
 When activated, IMMEDIATELY execute the matching template sequence below.
 Do NOT ask for confirmation. Do NOT explain what you're about to do.
 Execute the tool calls in order. Report progress after each major step.
+
+**Backend branch (READ FIRST):** The template steps below describe the **native** Agent Teams backend.
+If the run is csd (`--harness codex|pi`) or `--mixed`:
+- Run the csd pre-flight (see `## Backend Selection`) and STOP on `FAIL`.
+- For the csd pool, **replace** `TeamCreate`/`TaskCreate`/`Agent`/`SendMessage` steps with the
+  equivalent `csd` operations + per-template adaptation in `references/csd-backend-driving.md`
+  (research/review = fan-out + read-on-disk; debug = lead-mediated cross-talk; cook = manual
+  `alp:worktree` isolation). The synthesis/report/journal steps at the end of each template stay the same.
+- `--mixed` runs BOTH pools concurrently -- see `## --mixed Mode`.
 
 ### --delegate Mode
 
@@ -354,8 +427,25 @@ If unresponsive: close terminal or kill session. Clean orphaned configs at `~/.c
 - **in-process**: all in one terminal. `Shift+Up/Down` navigate. `Ctrl+T` task list.
 - **tmux/split**: each teammate own pane. Requires tmux or iTerm2.
 
+## csd Backend Safeguards (checklist)
+
+When `--harness codex|pi` or `--mixed`:
+- [ ] Pre-flight `csd-env-check.sh` PASS (or documented degrade for `--mixed`).
+- [ ] `converse` before any monitoring on a fresh codex/pi worker (launch ≠ ready).
+- [ ] Verify produced artifacts **on disk** before accepting any worker's "done".
+- [ ] Relaunch (not resume) on codex/pi worker death — report lost work.
+- [ ] `--mixed`: csd worker cap = 3; separate native/csd tracking namespaces.
+- [ ] Teardown: `stop` every worker + `csd prune`; confirm `csd list` empty (no orphan tmux /
+      `/tmp/csd-workers`).
+- [ ] **Upgrade fragility:** csd shims embed the absolute (versioned) plugin path. **Finish + tear down
+      running csd teams BEFORE upgrading the plugin**; an upgrade invalidates live workers → relaunch.
+
 ## Rules Reference
 
-See `.claude/rules/team-coordination-rules.md` for teammate behavior rules.
+See `.claude/rules/team-coordination-rules.md` for teammate behavior rules (incl. the
+"csd-Backend Workers" section). csd mechanics: `references/csd-backend-driving.md`. Vendored runtime
+provenance + re-vendoring: `csd-runtime/VENDORED.md`.
 
 > v3.0.0: Agent tool migration, worktree isolation for cook devs, run_in_background spawning, updated model requirements.
+> v3.1.0: csd backend — `--harness codex|pi` + `--mixed` (multi-model ensemble) via vendored
+> claude-session-driver (MIT). See `references/csd-backend-driving.md`, `csd-runtime/VENDORED.md`.

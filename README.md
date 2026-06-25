@@ -83,6 +83,14 @@ Browse `skills/` for the full set (backend, frontend, mobile, databases, devops,
 - **Output styles** (`output-styles/`) — coding-level explanations from ELI5 to "god" (set via `/alp:coding-level`).
 - **Rules** (`rules/`) — primary workflow, development rules, orchestration and team-coordination protocols.
 
+### Multi-harness orchestration (`alp:team`)
+
+`/alp:team` runs parallel workers via native Claude Agent Teams by default, and also supports
+`--harness codex|pi` and `--mixed claude,codex,...` (multi-model ensemble) through a vendored
+[claude-session-driver](https://github.com/obra/claude-session-driver) (MIT) in
+`skills/team/csd-runtime/`. csd mode needs Node ≥22.12 + `tmux` + the harness CLI authed; run
+`skills/team/scripts/csd-env-check.sh` to verify.
+
 ## Requirements
 
 - Claude Code or OpenCode CLI

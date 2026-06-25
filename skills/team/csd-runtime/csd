@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Vendored claude-session-driver (csd) entry wrapper for alp:team.
+#
+# Why a custom wrapper instead of upstream's scripts/csd:
+#   Upstream resolves its plugin root from $CLAUDE_PLUGIN_ROOT. Inside the alp
+#   plugin that variable is already set to alp's root, which would misdirect
+#   csd's path resolution. We force it to THIS vendored directory so:
+#     - codex/pi workers find lib/emit-event.cjs (hook emitter)
+#     - claude workers (if ever launched via csd) get --plugin-dir = this dir,
+#       loading .claude-plugin/plugin.json + hooks/hooks.json from here.
+#
+# Bundle lives in lib/ (not dist/) to avoid alp's scout-block .alpignore which
+# blocks the literal "dist" and "vendor" path tokens from context tooling.
+set -euo pipefail
+
+HERE="$(cd "$(dirname "$0")" && pwd)"
+
+# Pin all csd path resolution to the vendored tree (override inherited env).
+export CLAUDE_PLUGIN_ROOT="$HERE"
+export CSD_EMIT_EVENT_PATH="$HERE/lib/emit-event.cjs"
+export CSD_PI_EXTENSION_PATH="$HERE/lib/pi-extension.mjs"
+export CSD_PATH="$HERE/lib/csd.cjs"
+
+exec node "$HERE/lib/csd.cjs" "$@"
