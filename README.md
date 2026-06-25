@@ -41,7 +41,7 @@ opencode --plugin-dir ~/alp-plugin
 | `/alp:test` | Run tests |
 | `/alp:journal` | Write a development journal entry |
 | `/alp:kanban` | View task board |
-| `/alp:ck-help` | Full command reference |
+| `/alp:alp-help` | Full command reference |
 
 ## Skills
 
@@ -49,9 +49,9 @@ Skills are invoked automatically by Claude during workflows. Key skills:
 
 | Skill | Purpose |
 |-------|---------|
-| `ck-plan` | Planning engine — research, scope challenge, red-team, validation |
-| `ck-debug` | Systematic debugging workflow |
-| `ck-loop` | Autonomous task loop |
+| `alp-plan` | Planning engine — research, scope challenge, red-team, validation |
+| `alp-debug` | Systematic debugging workflow |
+| `alp-loop` | Autonomous task loop |
 | `cook` | Implementation execution |
 | `scout` | Parallel codebase exploration |
 | `bootstrap` | Project kickoff workflow |

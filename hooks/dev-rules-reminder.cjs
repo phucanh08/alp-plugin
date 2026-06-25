@@ -21,7 +21,7 @@ try {
     buildReminderContext,
     wasRecentlyInjected
   } = require('./lib/context-builder.cjs');
-  const { isHookEnabled } = require('./lib/ck-config-utils.cjs');
+  const { isHookEnabled } = require('./lib/alp-config-utils.cjs');
 
   // Early exit if hook disabled in config
   if (!isHookEnabled('dev-rules-reminder')) {

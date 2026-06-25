@@ -92,4 +92,4 @@ npx stitch-mcp-auto
 | Windows | `%AppData%\Claude\claude_desktop_config.json` |
 | Linux | `~/.config/Claude/claude_desktop_config.json` |
 
-For Claude Code CLI: use `.claude/.mcp.json` in project root (preferred for ClaudeKit).
+For Claude Code CLI: use `.claude/.mcp.json` in project root (preferred for AnhlpKit).

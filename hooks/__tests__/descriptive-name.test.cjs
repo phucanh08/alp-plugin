@@ -224,12 +224,12 @@ describe('descriptive-name.cjs', () => {
       }
     });
 
-    it('exits silently when disabled via .ck.json', async () => {
-      // Create .claude/.ck.json with hook disabled
+    it('exits silently when disabled via .alp.json', async () => {
+      // Create .claude/.alp.json with hook disabled
       const claudeDir = path.join(tempDir, '.claude');
       fs.mkdirSync(claudeDir, { recursive: true });
       fs.writeFileSync(
-        path.join(claudeDir, '.ck.json'),
+        path.join(claudeDir, '.alp.json'),
         JSON.stringify({ hooks: { 'descriptive-name': false } })
       );
 
@@ -241,8 +241,8 @@ describe('descriptive-name.cjs', () => {
       // Copy required files
       fs.copyFileSync(HOOK_PATH, path.join(hooksDir, 'descriptive-name.cjs'));
       fs.copyFileSync(
-        path.join(__dirname, '..', 'lib', 'ck-config-utils.cjs'),
-        path.join(libDir, 'ck-config-utils.cjs')
+        path.join(__dirname, '..', 'lib', 'alp-config-utils.cjs'),
+        path.join(libDir, 'alp-config-utils.cjs')
       );
 
       // Run from temp dir

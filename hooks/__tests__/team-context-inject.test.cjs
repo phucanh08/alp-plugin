@@ -410,7 +410,7 @@ describe('team-context-inject.cjs', () => {
   describe('CK Stack Context Building', () => {
 
     it('includes CK context when environment variables are set', async () => {
-      const tmpDir = path.join(os.tmpdir(), 'team-inject-ck-' + Date.now());
+      const tmpDir = path.join(os.tmpdir(), 'team-inject-alp-' + Date.now());
       fs.mkdirSync(tmpDir, { recursive: true });
       try {
         createTestTeam(tmpDir, 'team-a');
@@ -420,7 +420,7 @@ describe('team-context-inject.cjs', () => {
         }, {
           env: {
             HOME: tmpDir,
-            CK_REPORTS_PATH: '/project/plans/reports',
+            ALP_REPORTS_PATH: '/project/plans/reports',
             CK_PLANS_PATH: '/project/plans',
             CK_PROJECT_ROOT: '/project',
             CK_GIT_BRANCH: 'main'
@@ -465,7 +465,7 @@ describe('team-context-inject.cjs', () => {
     });
 
     it('only includes CK context lines when env vars exist (fail-open)', async () => {
-      const tmpDir = path.join(os.tmpdir(), 'team-inject-empty-ck-' + Date.now());
+      const tmpDir = path.join(os.tmpdir(), 'team-inject-empty-alp-' + Date.now());
       fs.mkdirSync(tmpDir, { recursive: true });
       try {
         createTestTeam(tmpDir, 'team-a');
@@ -704,18 +704,18 @@ describe('team-context-inject.cjs', () => {
       assert.strictEqual(exitCode, 0, 'Should exit 0 on parse error (fail-open)');
     });
 
-    it('logs to stderr only when CK_DEBUG is enabled', async () => {
+    it('logs to stderr only when ALP_DEBUG is enabled', async () => {
       const tmpDir = path.join(os.tmpdir(), 'team-inject-debug-' + Date.now());
       fs.mkdirSync(tmpDir, { recursive: true });
       try {
-        // With CK_DEBUG
+        // With ALP_DEBUG
         const resultWithDebug = await runHook({
           agent_id: 'invalid@team'
         }, {
-          env: { HOME: tmpDir, CK_DEBUG: '1' }
+          env: { HOME: tmpDir, ALP_DEBUG: '1' }
         });
 
-        // Without CK_DEBUG
+        // Without ALP_DEBUG
         const resultWithoutDebug = await runHook({
           agent_id: 'invalid@team'
         }, {
@@ -726,11 +726,11 @@ describe('team-context-inject.cjs', () => {
         assert.strictEqual(resultWithDebug.exitCode, 0);
         assert.strictEqual(resultWithoutDebug.exitCode, 0);
 
-        // Debug output should be minimal without CK_DEBUG
+        // Debug output should be minimal without ALP_DEBUG
         if (resultWithoutDebug.stderr) {
           assert.ok(
             resultWithoutDebug.stderr.length <= resultWithDebug.stderr.length,
-            'Should log less without CK_DEBUG'
+            'Should log less without ALP_DEBUG'
           );
         }
       } finally {

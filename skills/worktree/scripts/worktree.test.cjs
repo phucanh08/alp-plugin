@@ -10,7 +10,7 @@ const fs = require('fs');
 
 const SCRIPT_PATH = path.join(__dirname, 'worktree.cjs');
 const STANDALONE_DIR = path.dirname(path.dirname(__dirname)); // worktree dir
-const MONOREPO_DIR = '/home/kai/claudekit';
+const MONOREPO_DIR = '/home/kai/anhlpkit';
 
 let passed = 0;
 let failed = 0;
@@ -233,7 +233,7 @@ test('create in monorepo with project works', () => {
   const result = run('create engineer test-mono --prefix feat --dry-run --json', { cwd: MONOREPO_DIR });
   assert(result.success, 'Should succeed with project');
   const json = assertJSON(result.output);
-  assert(json.wouldCreate.project === 'claudekit-engineer', 'Should detect project');
+  assert(json.wouldCreate.project === 'anhlpkit-engineer', 'Should detect project');
 });
 
 test('create detects invalid project', () => {
@@ -343,8 +343,8 @@ test('create dry-run shows worktreeRootSource', () => {
 });
 
 test('superproject detection in submodule', () => {
-  // Test from claudekit-engineer submodule
-  const submodulePath = '/home/kai/claudekit/claudekit-engineer';
+  // Test from anhlpkit-engineer submodule
+  const submodulePath = '/home/kai/anhlpkit/anhlpkit-engineer';
   if (!fs.existsSync(submodulePath)) return;
   const result = run('info --json', { cwd: submodulePath });
   const json = assertJSON(result.output);
@@ -559,17 +559,17 @@ console.log('\n📦 Monorepo Edge Cases');
 
 test('create with partial project match in monorepo', () => {
   if (!fs.existsSync(MONOREPO_DIR)) return;
-  // 'cli' should match 'claudekit-cli'
+  // 'cli' should match 'anhlpkit-cli'
   const result = run('create cli test-partial --prefix feat --dry-run --json', { cwd: MONOREPO_DIR });
   assert(result.success, 'Should succeed with partial match');
   const json = assertJSON(result.output);
-  assert(json.wouldCreate.project === 'claudekit-cli', 'Should find claudekit-cli');
+  assert(json.wouldCreate.project === 'anhlpkit-cli', 'Should find anhlpkit-cli');
 });
 
 test('create detects multiple project matches', () => {
   if (!fs.existsSync(MONOREPO_DIR)) return;
-  // 'claudekit' matches multiple projects
-  const result = run('create claudekit test-multi --prefix feat --json', { cwd: MONOREPO_DIR });
+  // 'anhlpkit' matches multiple projects
+  const result = run('create anhlpkit test-multi --prefix feat --json', { cwd: MONOREPO_DIR });
   assert(!result.success, 'Should fail with multiple matches');
   const json = assertJSON(result.output);
   assert(json.error.code === 'MULTIPLE_PROJECTS_MATCH', 'Should have MULTIPLE_PROJECTS_MATCH error');
@@ -732,7 +732,7 @@ test('scenario: new user creates first worktree', () => {
 });
 
 test('scenario: user fixes bug in submodule', () => {
-  const submodulePath = '/home/kai/claudekit/claudekit-engineer';
+  const submodulePath = '/home/kai/anhlpkit/anhlpkit-engineer';
   if (!fs.existsSync(submodulePath)) return;
 
   // From submodule, create a fix branch

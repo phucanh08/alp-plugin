@@ -23,7 +23,7 @@ const { spawn, spawnSync } = require('child_process');
 
 const TEST_ROOT = path.resolve(__dirname, '../../../..');
 const STATUSLINE_PATH = path.resolve(__dirname, '../../..', 'statusline.cjs');
-const USAGE_CACHE_PATH = path.join(os.tmpdir(), `ck-usage-limits-cache-statusline-test-${process.pid}.json`);
+const USAGE_CACHE_PATH = path.join(os.tmpdir(), `alp-usage-limits-cache-statusline-test-${process.pid}.json`);
 
 let passed = 0;
 let failed = 0;
@@ -150,7 +150,7 @@ function createTempConfigProject(mode) {
   const ckDir = path.join(tmpDir, '.claude');
   fs.mkdirSync(ckDir, { recursive: true });
   fs.writeFileSync(
-    path.join(ckDir, '.ck.json'),
+    path.join(ckDir, '.alp.json'),
     JSON.stringify({ statusline: mode }, null, 2)
   );
   return tmpDir;

@@ -14,7 +14,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 // Usage cache file path (written by usage-context-awareness.cjs hook)
-const USAGE_CACHE_FILE = path.join(os.tmpdir(), 'ck-usage-limits-cache.json');
+const USAGE_CACHE_FILE = path.join(os.tmpdir(), 'alp-usage-limits-cache.json');
 const WARN_THRESHOLD = 70;
 const CRITICAL_THRESHOLD = 90;
 const {
@@ -23,7 +23,7 @@ const {
   getReportsPath,
   resolveNamingPattern,
   normalizePath
-} = require('./ck-config-utils.cjs');
+} = require('./alp-config-utils.cjs');
 
 // ═══════════════════════════════════════════════════════════════════════════
 // HELPER FUNCTIONS
@@ -271,7 +271,7 @@ function buildContextSection(sessionId) {
 
   // RE-ENABLED IF NEEDED IN THE FUTURE
   try {
-    const contextPath = path.join(os.tmpdir(), `ck-context-${sessionId}.json`);
+    const contextPath = path.join(os.tmpdir(), `alp-context-${sessionId}.json`);
     if (!fs.existsSync(contextPath)) return [];
 
     const data = JSON.parse(fs.readFileSync(contextPath, 'utf-8'));

@@ -13,9 +13,9 @@ Each generation = 1 credit. Each variant = 1 credit per variant.
 
 ## Local Tracking
 
-Stitch SDK has no programmatic quota check endpoint. ClaudeKit tracks locally:
+Stitch SDK has no programmatic quota check endpoint. AnhlpKit tracks locally:
 
-**File:** `~/.claudekit/.stitch-quota.json`
+**File:** `~/.anhlpkit/.stitch-quota.json`
 
 ```json
 {
@@ -50,14 +50,14 @@ Stitch SDK has no programmatic quota check endpoint. ClaudeKit tracks locally:
 When quota is exhausted:
 
 1. `stitch-quota.ts check` returns exit code 2
-2. Skill prints: "Daily quota exhausted. Use ck:ui-ux-pro-max as fallback."
-3. Activate `ck:ui-ux-pro-max` with the same design prompt
+2. Skill prints: "Daily quota exhausted. Use alp:ui-ux-pro-max as fallback."
+3. Activate `alp:ui-ux-pro-max` with the same design prompt
 4. `ui-ux-pro-max` generates text-based design spec (no external API needed)
 5. Proceed with implementation using text-based spec
 
 ## Drift Warning
 
-Local tracking can drift if user generates designs outside ClaudeKit (via Stitch web UI or other tools). If you hit `RATE_LIMITED` error despite local tracker showing credits available:
+Local tracking can drift if user generates designs outside AnhlpKit (via Stitch web UI or other tools). If you hit `RATE_LIMITED` error despite local tracker showing credits available:
 
 1. Run `npx tsx stitch-quota.ts reset`
 2. Set count to match actual usage (or leave at 0 if unknown)

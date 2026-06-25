@@ -1,6 +1,6 @@
 # Commands Catalog
 
-Auto-generated catalog of all available commands in ClaudeKit Engineer.
+Auto-generated catalog of all available commands in AnhlpKit Engineer.
 
 **Last Updated**: 2025-11-21
 
@@ -24,155 +24,155 @@ Auto-generated catalog of all available commands in ClaudeKit Engineer.
 
 ## Bootstrap Commands
 
-### `/ck:bootstrap:auto`
+### `/alp:bootstrap:auto`
 **Complexity**: ⚡⚡⚡⚡
 
 **Description**: Bootstrap a new project automatically
 
-**Usage**: `/ck:bootstrap:auto user-requirements`
+**Usage**: `/alp:bootstrap:auto user-requirements`
 
 
-### `/ck:bootstrap:auto:fast`
+### `/alp:bootstrap:auto:fast`
 **Complexity**: ⚡⚡⚡
 
 **Description**: Quickly bootstrap a new project automatically
 
-**Usage**: `/ck:bootstrap:auto:fast user-requirements`
+**Usage**: `/alp:bootstrap:auto:fast user-requirements`
 
 
 ## Content Creation
 
-### `/ck:content:cro`
+### `/alp:content:cro`
 **Description**: Analyze the current content and optimize for conversion
 
-**Usage**: `/ck:content:cro issues`
+**Usage**: `/alp:content:cro issues`
 
 
-### `/ck:content:enhance`
+### `/alp:content:enhance`
 **Description**: Analyze the current copy issues and enhance it
 
-**Usage**: `/ck:content:enhance issues`
+**Usage**: `/alp:content:enhance issues`
 
 
-### `/ck:content:fast`
+### `/alp:content:fast`
 **Description**: Write creative & smart copy [FAST]
 
-**Usage**: `/ck:content:fast user-request`
+**Usage**: `/alp:content:fast user-request`
 
 
-### `/ck:content:good`
+### `/alp:content:good`
 **Description**: Write good creative & smart copy [GOOD]
 
-**Usage**: `/ck:content:good user-request`
+**Usage**: `/alp:content:good user-request`
 
 
 ## Cook Commands
 
-### `/ck:cook:auto`
+### `/alp:cook:auto`
 **Complexity**: ⚡⚡
 
 **Description**: Implement a feature automatically ("trust me bro")
 
-**Usage**: `/ck:cook:auto tasks`
+**Usage**: `/alp:cook:auto tasks`
 
 
-### `/ck:cook:auto:fast`
+### `/alp:cook:auto:fast`
 **Complexity**: ⚡
 
 **Description**: No research. Only scout, plan & implement ["trust me bro"]
 
-**Usage**: `/ck:cook:auto:fast tasks-or-prompt`
+**Usage**: `/alp:cook:auto:fast tasks-or-prompt`
 
 
 ## Core Commands
 
-### `/ck:ask`
+### `/alp:ask`
 **Complexity**: ⚡
 
 **Description**: Answer technical and architectural questions.
 
-**Usage**: `/ck:ask technical-question`
+**Usage**: `/alp:ask technical-question`
 
 
-### `/ck:bootstrap`
+### `/alp:bootstrap`
 **Complexity**: ⚡⚡⚡⚡⚡
 
 **Description**: Bootstrap a new project step by step
 
-**Usage**: `/ck:bootstrap user-requirements`
+**Usage**: `/alp:bootstrap user-requirements`
 
 
-### `/ck:brainstorm`
+### `/alp:brainstorm`
 **Complexity**: ⚡⚡
 
 **Description**: Brainstorm a feature
 
-**Usage**: `/ck:brainstorm question`
+**Usage**: `/alp:brainstorm question`
 
 
-### `/ck:code`
+### `/alp:code`
 **Complexity**: ⚡
 
 **Description**: Start coding & testing an existing plan
 
-**Usage**: `/ck:code plan`
+**Usage**: `/alp:code plan`
 
 
-### `/ck:cook`
+### `/alp:cook`
 **Complexity**: ⚡⚡⚡
 
 **Description**: Implement a feature [step by step]
 
-**Usage**: `/ck:cook tasks`
+**Usage**: `/alp:cook tasks`
 
 
-### `/ck:debug`
+### `/alp:debug`
 **Complexity**: ⚡⚡
 
 **Description**: Debugging technical issues and providing solutions.
 
-**Usage**: `/ck:debug issues`
+**Usage**: `/alp:debug issues`
 
 
-### `/ck:fix`
+### `/alp:fix`
 **Complexity**: ⚡⚡
 
 **Description**: Analyze and fix small issues [AUTO DETECT COMPLEXITY]
 
-**Usage**: `/ck:fix issues`
+**Usage**: `/alp:fix issues`
 
 
-### `/ck:journal`
+### `/alp:journal`
 **Complexity**: ⚡
 
 **Description**: Write some journal entries.
 
 
-### `/ck:plan`
+### `/alp:plan`
 **Complexity**: ⚡⚡⚡
 
 **Description**: Intelligent plan creation with prompt enhancement
 
-**Usage**: `/ck:plan task`
+**Usage**: `/alp:plan task`
 
 
-### `/ck:scout`
+### `/alp:scout`
 **Description**: 
 
 
-### `/ck:test`
+### `/alp:test`
 **Complexity**: ⚡
 
 **Description**: Run tests locally and analyze the summary report.
 
 
-### `/ck:use-mcp`
+### `/alp:use-mcp`
 **Description**: Utilize tools of Model Context Protocol (MCP) servers
 
-**Usage**: `/ck:use-mcp task`
+**Usage**: `/alp:use-mcp task`
 
 
-### `/ck:watzup`
+### `/alp:watzup`
 **Complexity**: ⚡
 
 **Description**: Review recent changes and wrap up the work
@@ -180,55 +180,55 @@ Auto-generated catalog of all available commands in ClaudeKit Engineer.
 
 ## Design Commands
 
-### `/ck:design:3d`
+### `/alp:design:3d`
 **Description**: Create immersive interactive 3D designs with Three.js
 
-**Usage**: `/ck:design:3d tasks`
+**Usage**: `/alp:design:3d tasks`
 
 
-### `/ck:design:describe`
+### `/alp:design:describe`
 **Description**: Describe a design based on screenshot/video
 
-**Usage**: `/ck:design:describe screenshot`
+**Usage**: `/alp:design:describe screenshot`
 
 
-### `/ck:design:fast`
+### `/alp:design:fast`
 **Description**: Create a quick design
 
-**Usage**: `/ck:design:fast tasks`
+**Usage**: `/alp:design:fast tasks`
 
 
-### `/ck:design:good`
+### `/alp:design:good`
 **Description**: Create an immersive design
 
-**Usage**: `/ck:design:good tasks`
+**Usage**: `/alp:design:good tasks`
 
 
-### `/ck:design:screenshot`
+### `/alp:design:screenshot`
 **Description**: Create a design based on screenshot
 
-**Usage**: `/ck:design:screenshot screenshot`
+**Usage**: `/alp:design:screenshot screenshot`
 
 
-### `/ck:design:video`
+### `/alp:design:video`
 **Description**: Create a design based on video
 
-**Usage**: `/ck:design:video video`
+**Usage**: `/alp:design:video video`
 
 
 ## Documentation
 
-### `/ck:docs:init`
+### `/alp:docs:init`
 **Complexity**: ⚡⚡⚡⚡
 
 **Description**: Analyze the codebase and create initial documentation
 
 
-### `/ck:docs:summarize`
+### `/alp:docs:summarize`
 **Description**: 
 
 
-### `/ck:docs:update`
+### `/alp:docs:update`
 **Complexity**: ⚡⚡⚡
 
 **Description**: Analyze the codebase and update documentation
@@ -236,168 +236,168 @@ Auto-generated catalog of all available commands in ClaudeKit Engineer.
 
 ## Fix & Debug
 
-### `/ck:fix:ci`
+### `/alp:fix:ci`
 **Complexity**: ⚡
 
 **Description**: Analyze Github Actions logs and fix issues
 
-**Usage**: `/ck:fix:ci github-actions-url`
+**Usage**: `/alp:fix:ci github-actions-url`
 
 
-### `/ck:fix:fast`
+### `/alp:fix:fast`
 **Complexity**: ⚡
 
 **Description**: Analyze and fix small issues [FAST]
 
-**Usage**: `/ck:fix:fast issues`
+**Usage**: `/alp:fix:fast issues`
 
 
-### `/ck:fix:hard`
+### `/alp:fix:hard`
 **Complexity**: ⚡⚡⚡
 
 **Description**: Use subagents to plan and fix hard issues
 
-**Usage**: `/ck:fix:hard issues`
+**Usage**: `/alp:fix:hard issues`
 
 
-### `/ck:fix:logs`
+### `/alp:fix:logs`
 **Complexity**: ⚡
 
 **Description**: Analyze logs and fix issues
 
-**Usage**: `/ck:fix:logs issue`
+**Usage**: `/alp:fix:logs issue`
 
 
-### `/ck:fix:test`
+### `/alp:fix:test`
 **Complexity**: ⚡⚡
 
 **Description**: Run test suite and fix issues
 
-**Usage**: `/ck:fix:test issues`
+**Usage**: `/alp:fix:test issues`
 
 
-### `/ck:fix:types`
+### `/alp:fix:types`
 **Complexity**: ⚡
 
 **Description**: Fix type errors
 
 
-### `/ck:fix:ui`
+### `/alp:fix:ui`
 **Complexity**: ⚡⚡
 
 **Description**: Analyze and fix UI issues
 
-**Usage**: `/ck:fix:ui issue`
+**Usage**: `/alp:fix:ui issue`
 
 
 ## Git Commands
 
-### `/ck:git:cm`
+### `/alp:git:cm`
 **Description**: Stage all files and create a commit.
 
 
-### `/ck:git:cp`
+### `/alp:git:cp`
 **Description**: Stage, commit and push all code in the current branch
 
 
-### `/ck:git:pr`
+### `/alp:git:pr`
 **Description**: 
 
 
 ## Integrations
 
-### `/ck:integrate:polar`
+### `/alp:integrate:polar`
 **Complexity**: ⚡⚡
 
 **Description**: Implement payment integration with Polar.sh
 
-**Usage**: `/ck:integrate:polar tasks`
+**Usage**: `/alp:integrate:polar tasks`
 
 
-### `/ck:integrate:sepay`
+### `/alp:integrate:sepay`
 **Complexity**: ⚡⚡
 
 **Description**: Implement payment integration with SePay.vn
 
-**Usage**: `/ck:integrate:sepay tasks`
+**Usage**: `/alp:integrate:sepay tasks`
 
 
 ## Planning
 
-### `/ck:plan:ci`
+### `/alp:plan:ci`
 **Description**: Analyze Github Actions logs and provide a plan to fix the issues
 
-**Usage**: `/ck:plan:ci github-actions-url`
+**Usage**: `/alp:plan:ci github-actions-url`
 
 
-### `/ck:plan:cro`
+### `/alp:plan:cro`
 **Description**: Create a CRO plan for the given content
 
-**Usage**: `/ck:plan:cro issues`
+**Usage**: `/alp:plan:cro issues`
 
 
-### `/ck:plan:fast`
+### `/alp:plan:fast`
 **Complexity**: ⚡⚡
 
 **Description**: No research. Only analyze and create an implementation plan
 
-**Usage**: `/ck:plan:fast task`
+**Usage**: `/alp:plan:fast task`
 
 
-### `/ck:plan:hard`
+### `/alp:plan:hard`
 **Complexity**: ⚡⚡⚡
 
 **Description**: Research, analyze, and create an implementation plan
 
-**Usage**: `/ck:plan:hard task`
+**Usage**: `/alp:plan:hard task`
 
 
-### `/ck:plan:two`
+### `/alp:plan:two`
 **Complexity**: ⚡⚡⚡⚡
 
 **Description**: Research & create an implementation plan with 2 approaches
 
-**Usage**: `/ck:plan:two task`
+**Usage**: `/alp:plan:two task`
 
 
 ## Code Review
 
-### `/ck:review:codebase`
+### `/alp:review:codebase`
 **Complexity**: ⚡⚡⚡
 
 **Description**: Scan & analyze the codebase.
 
-**Usage**: `/ck:review:codebase tasks-or-prompt`
+**Usage**: `/alp:review:codebase tasks-or-prompt`
 
 
 ## Scout Commands
 
-### `/ck:scout:ext`
+### `/alp:scout:ext`
 **Description**: 
 
 
 ## Skill Management
 
-### `/ck:skill:add`
+### `/alp:skill:add`
 **Description**: 
 
 
-### `/ck:skill:create`
+### `/alp:skill:create`
 **Description**: Create a new agent skill
 
-**Usage**: `/ck:skill:create prompt-or-llms-or-github-url`
+**Usage**: `/alp:skill:create prompt-or-llms-or-github-url`
 
 
-### `/ck:skill:fix-logs`
+### `/alp:skill:fix-logs`
 **Description**: Fix the agent skill based on `logs.txt` file.
 
-**Usage**: `/ck:skill:fix-logs prompt-or-path-to-skill`
+**Usage**: `/alp:skill:fix-logs prompt-or-path-to-skill`
 
 
-### `/ck:skill:optimize`
+### `/alp:skill:optimize`
 **Description**: 
 
 
-### `/ck:skill:optimize:auto`
+### `/alp:skill:optimize:auto`
 **Description**: 
 

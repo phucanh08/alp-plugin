@@ -1,9 +1,9 @@
 ---
-name: ck:coding-level
+name: alp:coding-level
 description: "Set coding experience level for tailored explanations and output format."
 argument-hint: "[0-5]"
 metadata:
-  author: claudekit
+  author: anhlpkit
   version: "1.0.0"
 ---
 
@@ -13,7 +13,7 @@ Set your coding experience level for tailored explanations and output format.
 
 ## Usage
 
-`/ck:coding-level [0-5]`
+`/alp:coding-level [0-5]`
 
 ## Levels
 
@@ -28,13 +28,13 @@ Set your coding experience level for tailored explanations and output format.
 
 ## How It Works
 
-1. Set `codingLevel` in `.claude/.ck.json`
+1. Set `codingLevel` in `.claude/.alp.json`
 2. Guidelines are **automatically injected** on every session start
 3. No manual activation needed - it just works!
 
 ## Example
 
-Set level 1 in `.claude/.ck.json`:
+Set level 1 in `.claude/.alp.json`:
 ```json
 {
   "codingLevel": 1,

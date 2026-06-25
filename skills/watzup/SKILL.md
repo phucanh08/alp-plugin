@@ -1,8 +1,8 @@
 ---
-name: ck:watzup
+name: alp:watzup
 description: "Review recent changes and wrap up the current work session."
 metadata:
-  author: claudekit
+  author: anhlpkit
   version: "1.0.0"
 ---
 

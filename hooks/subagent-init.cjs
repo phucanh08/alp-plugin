@@ -24,7 +24,7 @@ try {
     normalizePath,
     extractTaskListId,
     isHookEnabled
-  } = require('./lib/ck-config-utils.cjs');
+  } = require('./lib/alp-config-utils.cjs');
   const { resolveSkillsVenv } = require('./lib/context-builder.cjs');
   const { createHookTimer, logHookCrash } = require('./lib/hook-logger.cjs');
 
@@ -108,7 +108,7 @@ async function main() {
     const baseDir = effectiveCwd;
 
     // Debug logging for path resolution troubleshooting
-    if (process.env.CK_DEBUG) {
+    if (process.env.ALP_DEBUG) {
       console.error(`[subagent-init] effectiveCwd=${effectiveCwd}, gitRoot=${gitRoot}, baseDir=${baseDir}`);
     }
     const namePattern = resolveNamingPattern(config.plan, gitBranch);

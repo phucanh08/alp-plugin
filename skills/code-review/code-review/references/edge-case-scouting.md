@@ -29,7 +29,7 @@ git diff --name-only HEAD~1
 
 ### 2. Invoke Scout
 ```
-/ck:scout edge cases for recent changes.
+/alp:scout edge cases for recent changes.
 
 Changed: {files from git diff}
 

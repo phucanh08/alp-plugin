@@ -16,7 +16,7 @@ try {
   const fs = require('fs');
   const path = require('path');
   const os = require('os');
-  const { isHookEnabled } = require('./lib/ck-config-utils.cjs');
+  const { isHookEnabled } = require('./lib/alp-config-utils.cjs');
 
   if (!isHookEnabled('teammate-idle-handler')) {
     process.exit(0);
@@ -99,7 +99,7 @@ function main() {
     console.log(JSON.stringify(output));
     process.exit(0);
   } catch (error) {
-    if (process.env.CK_DEBUG) {
+    if (process.env.ALP_DEBUG) {
       console.error(`[teammate-idle-handler] Error: ${error.message}`);
     }
     process.exit(0);

@@ -6,7 +6,7 @@
  *   npx tsx stitch-quota.ts increment   # Bump count after generation
  *   npx tsx stitch-quota.ts reset       # Force reset counter
  *
- * Tracks usage in ~/.claudekit/.stitch-quota.json.
+ * Tracks usage in ~/.anhlpkit/.stitch-quota.json.
  * Auto-resets when date changes (UTC midnight).
  */
 
@@ -16,7 +16,7 @@ import os from "os";
 
 // -- Config --
 
-const QUOTA_DIR = path.join(os.homedir(), ".claudekit");
+const QUOTA_DIR = path.join(os.homedir(), ".anhlpkit");
 const QUOTA_FILE = path.join(QUOTA_DIR, ".stitch-quota.json");
 const DEFAULT_LIMIT = parseInt(process.env.STITCH_QUOTA_LIMIT || "200", 10);
 const WARN_THRESHOLD = 0.2; // Warn when <20% remaining
@@ -71,7 +71,7 @@ function check(): void {
   }, null, 2));
 
   if (remaining <= 0) {
-    console.error("[X] Daily quota exhausted. Use ck:ui-ux-pro-max as fallback.");
+    console.error("[X] Daily quota exhausted. Use alp:ui-ux-pro-max as fallback.");
     process.exit(2);
   } else if (pct < WARN_THRESHOLD) {
     console.error(`[!] Low quota: ${remaining}/${state.limit} credits remaining (${Math.round(pct * 100)}%)`);

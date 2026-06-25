@@ -68,7 +68,7 @@ function getCachePath(cwd) {
     .update(cwd)
     .digest('hex')
     .slice(0, 8);
-  return path.join(os.tmpdir(), `ck-git-cache-${hash}.json`);
+  return path.join(os.tmpdir(), `alp-git-cache-${hash}.json`);
 }
 
 /**

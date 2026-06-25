@@ -29,14 +29,14 @@ const FIXTURES_DIR = path.join(__dirname, 'fixtures');
 
 describe('loadPatterns', () => {
   it('loads patterns from fixture file', () => {
-    const patterns = loadPatterns(path.join(FIXTURES_DIR, 'ckignore-default.txt'));
+    const patterns = loadPatterns(path.join(FIXTURES_DIR, 'alpignore-default.txt'));
     assert.ok(patterns.includes('node_modules'));
     assert.ok(patterns.includes('dist'));
     assert.ok(patterns.includes('build'));
   });
 
   it('returns DEFAULT_PATTERNS for non-existent file', () => {
-    const patterns = loadPatterns('/non/existent/.ckignore');
+    const patterns = loadPatterns('/non/existent/.alpignore');
     assert.deepStrictEqual(patterns, DEFAULT_PATTERNS);
   });
 
@@ -46,24 +46,24 @@ describe('loadPatterns', () => {
   });
 
   it('filters out comments', () => {
-    const patterns = loadPatterns(path.join(FIXTURES_DIR, 'ckignore-default.txt'));
+    const patterns = loadPatterns(path.join(FIXTURES_DIR, 'alpignore-default.txt'));
     assert.ok(!patterns.some(p => p.startsWith('#')));
   });
 
   it('filters out empty lines', () => {
-    const patterns = loadPatterns(path.join(FIXTURES_DIR, 'ckignore-default.txt'));
+    const patterns = loadPatterns(path.join(FIXTURES_DIR, 'alpignore-default.txt'));
     assert.ok(!patterns.includes(''));
   });
 
   it('loads custom patterns', () => {
-    const patterns = loadPatterns(path.join(FIXTURES_DIR, 'ckignore-custom.txt'));
+    const patterns = loadPatterns(path.join(FIXTURES_DIR, 'alpignore-custom.txt'));
     assert.ok(patterns.includes('out'));
     assert.ok(patterns.includes('.cache'));
     assert.ok(patterns.includes('*.pyc'));
   });
 
   it('loads negation patterns', () => {
-    const patterns = loadPatterns(path.join(FIXTURES_DIR, 'ckignore-negation.txt'));
+    const patterns = loadPatterns(path.join(FIXTURES_DIR, 'alpignore-negation.txt'));
     assert.ok(patterns.includes('!src/vendor'));
     assert.ok(patterns.includes('!dist/public'));
   });
@@ -190,7 +190,7 @@ describe('matchPath - allowed paths', () => {
 // ═══════════════════════════════════════════════════════════════════════════
 
 describe('matchPath - negation patterns', () => {
-  const patterns = loadPatterns(path.join(FIXTURES_DIR, 'ckignore-negation.txt'));
+  const patterns = loadPatterns(path.join(FIXTURES_DIR, 'alpignore-negation.txt'));
   const matcher = createMatcher(patterns);
 
   it('blocks vendor by default', () => {
@@ -246,8 +246,8 @@ describe('matchPath - normalization', () => {
 // matchPath — custom patterns
 // ═══════════════════════════════════════════════════════════════════════════
 
-describe('matchPath - custom .ckignore', () => {
-  const patterns = loadPatterns(path.join(FIXTURES_DIR, 'ckignore-custom.txt'));
+describe('matchPath - custom .alpignore', () => {
+  const patterns = loadPatterns(path.join(FIXTURES_DIR, 'alpignore-custom.txt'));
   const matcher = createMatcher(patterns);
 
   it('blocks "out" directory', () => {

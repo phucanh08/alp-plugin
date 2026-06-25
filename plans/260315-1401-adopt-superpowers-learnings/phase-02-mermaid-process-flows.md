@@ -106,13 +106,13 @@ flowchart TD
     G -->|No| F
     G -->|Yes| H[Write Design Doc / Report]
     H --> I{Create Plan?}
-    I -->|Yes| J[Invoke /ck:plan]
+    I -->|Yes| J[Invoke /alp:plan]
     I -->|No| K[End Session]
     J --> L[Journal]
     K --> L
 `` `
 
-**This diagram is the authoritative workflow.** The terminal state is either `/ck:plan` or end.
+**This diagram is the authoritative workflow.** The terminal state is either `/alp:plan` or end.
 ```
 
 ### 4. Plan Process Flow

@@ -1,6 +1,6 @@
 # Skills Catalog
 
-Auto-generated catalog of all available skills in ClaudeKit Engineer.
+Auto-generated catalog of all available skills in AnhlpKit Engineer.
 
 **Last Updated**: 2025-11-21
 

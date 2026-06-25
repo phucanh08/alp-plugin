@@ -161,15 +161,15 @@ function extractPaths(toolInput) {
 }
 
 /**
- * Load .ck.json config to check if privacy block is disabled
- * @param {string} [configDir] - Directory containing .ck.json (defaults to .claude in cwd)
+ * Load .alp.json config to check if privacy block is disabled
+ * @param {string} [configDir] - Directory containing .alp.json (defaults to .claude in cwd)
  * @returns {boolean} true if privacy block should be skipped
  */
 function isPrivacyBlockDisabled(configDir) {
   try {
     const configPath = configDir
-      ? path.join(configDir, '.ck.json')
-      : path.join(process.cwd(), '.claude', '.ck.json');
+      ? path.join(configDir, '.alp.json')
+      : path.join(process.cwd(), '.claude', '.alp.json');
     const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
     return config.privacyBlock === false;
   } catch {
@@ -211,7 +211,7 @@ function buildPromptData(filePath) {
  * @param {Object} params.toolInput - Tool input with file_path, path, command, etc.
  * @param {Object} [params.options]
  * @param {boolean} [params.options.disabled] - Skip checks if true
- * @param {string} [params.options.configDir] - Directory for .ck.json config
+ * @param {string} [params.options.configDir] - Directory for .alp.json config
  * @param {boolean} [params.options.allowBash] - Allow Bash tool without blocking (default: true)
  * @returns {{
  *   blocked: boolean,

@@ -1,9 +1,9 @@
 ---
-name: ck:security-scan
+name: alp:security-scan
 description: "Scan codebase for security vulnerabilities, hardcoded secrets, dependency issues, and OWASP patterns. Use when asked to 'security scan', 'check for secrets', 'audit security', or before major releases."
 argument-hint: "[scope] [--secrets-only] [--deps-only] [--full]"
 metadata:
-  author: claudekit
+  author: anhlpkit
   version: "1.0.0"
 ---
 
@@ -14,10 +14,10 @@ Lightweight security scanner using Claude's reasoning + shell tools. No external
 ## Usage
 
 ```
-/ck:security-scan              # Full scan of current project
-/ck:security-scan --secrets-only   # Only secret/credential detection
-/ck:security-scan --deps-only      # Only dependency audit
-/ck:security-scan src/api/         # Scan specific directory
+/alp:security-scan              # Full scan of current project
+/alp:security-scan --secrets-only   # Only secret/credential detection
+/alp:security-scan --deps-only      # Only dependency audit
+/alp:security-scan src/api/         # Scan specific directory
 ```
 
 ## Scan Categories
@@ -126,7 +126,7 @@ Output a markdown report directly in chat:
 1. ...
 ```
 
-If `--auto` mode active in cook workflow: save report to `{CK_REPORTS_PATH}` or `plans/reports/security-scan-{date}.md`.
+If `--auto` mode active in cook workflow: save report to `{ALP_REPORTS_PATH}` or `plans/reports/security-scan-{date}.md`.
 
 ## Scope Declaration
 

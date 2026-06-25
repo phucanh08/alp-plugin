@@ -127,7 +127,7 @@ Before marking task complete:
 
 ## Success Criteria
 
-- `/ck:cook "implement feature" --tdd` enforces RED-GREEN-REFACTOR
+- `/alp:cook "implement feature" --tdd` enforces RED-GREEN-REFACTOR
 - Default cook behavior unchanged (no TDD enforcement)
 - Anti-rationalization table prevents common TDD skip excuses
 - TDD mode works with all other cook modes (--tdd --auto = auto TDD)

@@ -48,17 +48,17 @@
 #### 6. Visual Explanations
 When explaining complex code, protocols, or architecture:
 - **When to use:** User asks "explain", "how does X work", "visualize", or topic has 3+ interacting components
-- Use `/ck:preview --explain <topic>` to generate visual explanation with ASCII + Mermaid
-- Use `/ck:preview --diagram <topic>` for architecture and data flow diagrams
-- Use `/ck:preview --slides <topic>` for step-by-step walkthroughs
-- Use `/ck:preview --ascii <topic>` for terminal-friendly output only
+- Use `/alp:preview --explain <topic>` to generate visual explanation with ASCII + Mermaid
+- Use `/alp:preview --diagram <topic>` for architecture and data flow diagrams
+- Use `/alp:preview --slides <topic>` for step-by-step walkthroughs
+- Use `/alp:preview --ascii <topic>` for terminal-friendly output only
 - **HTML mode** (add `--html` for self-contained HTML pages, opens directly in browser):
-  - `/ck:preview --html --explain <topic>` — publication-quality HTML explanation
-  - `/ck:preview --html --diagram <topic>` — interactive HTML diagram with zoom controls
-  - `/ck:preview --html --slides <topic>` — magazine-quality slide deck
-  - `/ck:preview --html --diff [ref]` — visual diff review
-  - `/ck:preview --html --plan-review` — plan vs codebase comparison
-  - `/ck:preview --html --recap [timeframe]` — project context snapshot
+  - `/alp:preview --html --explain <topic>` — publication-quality HTML explanation
+  - `/alp:preview --html --diagram <topic>` — interactive HTML diagram with zoom controls
+  - `/alp:preview --html --slides <topic>` — magazine-quality slide deck
+  - `/alp:preview --html --diff [ref]` — visual diff review
+  - `/alp:preview --html --plan-review` — plan vs codebase comparison
+  - `/alp:preview --html --recap [timeframe]` — project context snapshot
 - **Plan context:** Visuals save to plan folder from `## Plan Context` hook injection; if none, uses `plans/visuals/`
 - **Markdown mode:** Auto-opens in browser via markdown-novel-viewer with Mermaid rendering
 - **HTML mode:** Opens directly in browser — self-contained, no server needed

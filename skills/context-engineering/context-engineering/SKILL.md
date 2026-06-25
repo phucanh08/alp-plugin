@@ -1,11 +1,11 @@
 ---
-name: ck:context-engineering
+name: alp:context-engineering
 description: >-
   Check context usage limits, monitor time remaining, optimize token consumption, debug context failures.
   Use when asking about context percentage, rate limits, usage warnings, context optimization, agent architectures, memory systems.
 argument-hint: "[topic or question]"
 metadata:
-  author: claudekit
+  author: anhlpkit
   version: "1.0.0"
 ---
 
@@ -102,7 +102,7 @@ Context Window Usage: 67%
 
 **Data Sources:**
 - Usage limits: Anthropic OAuth API (`https://api.anthropic.com/api/oauth/usage`)
-- Context window: Statusline temp file (`/tmp/ck-context-{session_id}.json`)
+- Context window: Statusline temp file (`/tmp/alp-context-{session_id}.json`)
 
 ## Scripts
 

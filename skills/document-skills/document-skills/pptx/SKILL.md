@@ -1,9 +1,9 @@
 ---
-name: ck:pptx
+name: alp:pptx
 description: Create, edit, analyze .pptx PowerPoint files. Use for presentations, slides, layouts, speaker notes, template modification, content extraction, slide generation.
 license: Proprietary. LICENSE.txt has complete terms
 metadata:
-  author: claudekit
+  author: anhlpkit
   version: "1.0.0"
 ---
 

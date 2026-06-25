@@ -17,7 +17,7 @@ try {
   const fs = require('fs');
   const path = require('path');
   const os = require('os');
-  const { isHookEnabled } = require('./lib/ck-config-utils.cjs');
+  const { isHookEnabled } = require('./lib/alp-config-utils.cjs');
   const { createHookTimer, logHookCrash } = require('./lib/hook-logger.cjs');
 
   if (!isHookEnabled('task-completed-handler')) {
@@ -50,7 +50,7 @@ function countTasks(teamName) {
 }
 
 function logCompletion(teamName, taskId, taskSubject, teammateName) {
-  const reportsPath = process.env.CK_REPORTS_PATH;
+  const reportsPath = process.env.ALP_REPORTS_PATH;
   if (!reportsPath) return;
   const logFile = path.join(reportsPath, `team-${teamName}-completions.md`);
   try {
@@ -105,7 +105,7 @@ function main() {
     timer.end({ status: 'ok', exit: 0, target: String(task_id || ''), note: 'completion-logged' });
     process.exit(0);
   } catch (error) {
-    if (process.env.CK_DEBUG) {
+    if (process.env.ALP_DEBUG) {
       console.error(`[task-completed-handler] Error: ${error.message}`);
     }
     logHookCrash('task-completed-handler', error, { event: 'TaskCompleted' });

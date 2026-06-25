@@ -1,9 +1,9 @@
 ---
-name: ck:fix
+name: alp:fix
 description: "ALWAYS activate this skill before fixing ANY bug, error, test failure, CI/CD issue, type error, lint, log error, UI issue, code problem."
 argument-hint: "[issue] --auto|--review|--quick|--parallel"
 metadata:
-  author: claudekit
+  author: anhlpkit
   version: "2.0.0"
 ---
 
@@ -83,7 +83,7 @@ See `references/mode-selection.md` for AskUserQuestion format.
 **Purpose:** Understand the affected codebase BEFORE forming any hypotheses.
 
 **Mandatory skill chain:**
-1. Activate `ck:scout` skill OR launch 2-3 parallel `Explore` subagents
+1. Activate `alp:scout` skill OR launch 2-3 parallel `Explore` subagents
 2. Discover: affected files, dependencies, related tests, recent changes (`git log`)
 3. Read `./docs` for project context if unfamiliar
 
@@ -98,10 +98,10 @@ See `references/mode-selection.md` for AskUserQuestion format.
 
 **Mandatory skill chain:**
 1. **Capture pre-fix state:** Record exact error messages, failing test output, stack traces, log snippets. This becomes the baseline for Step 5 verification.
-2. Activate `ck:debug` skill (systematic-debugging + root-cause-tracing techniques).
-3. Activate `ck:sequential-thinking` skill — form hypotheses through structured reasoning, NOT guessing.
+2. Activate `alp:debug` skill (systematic-debugging + root-cause-tracing techniques).
+3. Activate `alp:sequential-thinking` skill — form hypotheses through structured reasoning, NOT guessing.
 4. Spawn parallel `Explore` subagents to test each hypothesis against codebase evidence.
-5. If 2+ hypotheses fail → auto-activate `ck:problem-solving` skill for alternative approaches.
+5. If 2+ hypotheses fail → auto-activate `alp:problem-solving` skill for alternative approaches.
 6. Create diagnosis report: confirmed root cause, evidence chain, affected scope.
 
 See `references/diagnosis-protocol.md` for full methodology.
@@ -154,7 +154,7 @@ See `references/prevention-gate.md` for prevention requirements.
 2. `docs-manager` subagent → update `./docs` if changes warrant (NON-OPTIONAL)
 3. `TaskUpdate` → mark ALL Claude Tasks `completed` (skip if Task tools unavailable)
 4. Ask user if they want to commit via `git-manager` subagent
-5. Run `/ck:journal` to write a concise technical journal entry upon completion
+5. Run `/alp:journal` to write a concise technical journal entry upon completion
 
 ---
 
@@ -163,15 +163,15 @@ See `references/prevention-gate.md` for prevention requirements.
 See `references/skill-activation-matrix.md` for complete matrix.
 
 **Always activate (ALL workflows):**
-- `ck:scout` (Step 1) — understand before diagnosing
-- `ck:debug` (Step 2) — systematic root cause investigation
-- `ck:sequential-thinking` (Step 2) — structured hypothesis formation
+- `alp:scout` (Step 1) — understand before diagnosing
+- `alp:debug` (Step 2) — systematic root cause investigation
+- `alp:sequential-thinking` (Step 2) — structured hypothesis formation
 
 **Conditional:**
-- `ck:problem-solving` — auto-triggers when 2+ hypotheses fail in Step 2
-- `ck:brainstorm` — multiple valid approaches, architecture decision (Deep only)
-- `ck:context-engineering` — fixing AI/LLM/agent code
-- `ck:project-management` — moderate+ for task hydration/sync-back
+- `alp:problem-solving` — auto-triggers when 2+ hypotheses fail in Step 2
+- `alp:brainstorm` — multiple valid approaches, architecture decision (Deep only)
+- `alp:context-engineering` — fixing AI/LLM/agent code
+- `alp:project-management` — moderate+ for task hydration/sync-back
 
 **Subagents:** `debugger`, `researcher`, `planner`, `code-reviewer`, `tester`, `Bash`
 **Parallel:** Multiple `Explore` agents for scouting, `Bash` agents for verification

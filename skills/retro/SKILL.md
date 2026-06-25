@@ -1,10 +1,10 @@
 ---
-name: ck:retro
+name: alp:retro
 description: "Data-driven sprint retrospective. Gathers git metrics (commits, LOC, hotspots, churn), computes derived health indicators, and generates a structured markdown or HTML report. Use after sprints, weekly check-ins, or any review period."
 license: MIT
 argument-hint: "[timeframe] [--compare] [--team] [--format html|md]"
 metadata:
-  author: claudekit
+  author: anhlpkit
   version: "1.0.0"
 ---
 

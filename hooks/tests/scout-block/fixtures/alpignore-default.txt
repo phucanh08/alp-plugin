@@ -1,0 +1,13 @@
+# Default .alpignore for testing
+node_modules
+dist
+build
+.next
+.nuxt
+__pycache__
+.venv
+venv
+vendor
+target
+.git
+coverage

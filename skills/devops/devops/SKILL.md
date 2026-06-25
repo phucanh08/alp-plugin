@@ -1,10 +1,10 @@
 ---
-name: ck:devops
+name: alp:devops
 description: Deploy to Cloudflare (Workers, R2, D1), Docker, GCP (Cloud Run, GKE), Kubernetes (kubectl, Helm). Use for serverless, containers, CI/CD, GitOps, security audit.
 license: MIT
 argument-hint: "[platform] [task]"
 metadata:
-  author: claudekit
+  author: anhlpkit
   version: "2.0.0"
 ---
 

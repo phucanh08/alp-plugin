@@ -1,9 +1,9 @@
 ---
-name: ck:git
+name: alp:git
 description: "Git operations with conventional commits. Use for staging, committing, pushing, PRs, merges. Auto-splits commits by type/scope. Security scans for secrets."
 argument-hint: "cm|cp|pr|merge [args]"
 metadata:
-  author: claudekit
+  author: anhlpkit
   version: "1.0.0"
 ---
 
@@ -23,7 +23,7 @@ If invoked without arguments, use `AskUserQuestion` to present available git ope
 Present as options via `AskUserQuestion` with header "Git Operation", question "What would you like to do?".
 
 Execute git workflows via `git-manager` subagent to isolate verbose output.
-Activate `ck:context-engineering` skill.
+Activate `alp:context-engineering` skill.
 
 **IMPORTANT:**
 - Sacrifice grammar for the sake of concision.

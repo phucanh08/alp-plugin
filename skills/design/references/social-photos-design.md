@@ -59,7 +59,7 @@ Activate these skills in sequence:
 
 1. **`/ckm:brand`** — Extract brand colors, fonts, voice from user's project
 2. **`/ckm:design-system`** — Get design tokens (spacing, typography scale, color palette)
-3. **Randomly invoke ONE of:** `/ck:ui-ux-pro-max` OR `/ck:frontend-design` — for layout, hierarchy, visual balance. Pick one at random each run for design variety.
+3. **Randomly invoke ONE of:** `/alp:ui-ux-pro-max` OR `/alp:frontend-design` — for layout, hierarchy, visual balance. Pick one at random each run for design variety.
 
 For each approved idea + each target size, create an HTML file:
 

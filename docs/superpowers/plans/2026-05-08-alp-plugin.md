@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Convert `claudekit-engineer` project template thành Claude Code / Codex plugin cá nhân, cài một lần dùng cho tất cả projects.
+**Goal:** Convert `anhlpkit-engineer` project template thành Claude Code / Codex plugin cá nhân, cài một lần dùng cho tất cả projects.
 
 **Architecture:** Clone repo nguồn, di chuyển nội dung từ `.claude/` ra root level theo plugin convention, thêm plugin manifests (`.claude-plugin/`, `.codex-plugin/`), tạo `hooks/hooks.json` với `${CLAUDE_PLUGIN_ROOT}`, rồi đăng ký plugin local vào `~/.claude/settings.json` và `installed_plugins.json`.
 
@@ -34,18 +34,18 @@
 **Files:**
 - Tạo: `D:\Projects\alp-plugin\.tmp-source\` (temporary, sẽ xóa)
 
-> **Prerequisite:** Đảm bảo https://github.com/phucanh08/claudekit-engineer tồn tại.  
-> Nếu chưa có, fork từ https://github.com/gnoah1379/claudekit-engineer trước.
+> **Prerequisite:** Đảm bảo https://github.com/phucanh08/anhlpkit-engineer tồn tại.  
+> Nếu chưa có, fork từ https://github.com/gnoah1379/anhlpkit-engineer trước.
 
 - [ ] **Step 1: Clone repo vào thư mục tạm**
 
 ```powershell
 cd D:\Projects\alp-plugin
-git clone https://github.com/phucanh08/claudekit-engineer.git .tmp-source
+git clone https://github.com/phucanh08/anhlpkit-engineer.git .tmp-source
 ```
 
 Expected output: `Cloning into '.tmp-source'...` + thông báo hoàn tất.  
-Nếu 404, thay bằng: `https://github.com/gnoah1379/claudekit-engineer.git`
+Nếu 404, thay bằng: `https://github.com/gnoah1379/anhlpkit-engineer.git`
 
 - [ ] **Step 2: Xác nhận clone thành công**
 
@@ -241,7 +241,7 @@ Local-only plugin. Already registered in `~/.claude/settings.json`.
 
 ## Source
 
-Based on [claudekit-engineer](https://github.com/gnoah1379/claudekit-engineer)
+Based on [anhlpkit-engineer](https://github.com/gnoah1379/anhlpkit-engineer)
 ```
 
 - [ ] **Step 3: Tạo `CLAUDE.md`**
@@ -251,7 +251,7 @@ Tạo file `D:\Projects\alp-plugin\CLAUDE.md` với nội dung:
 ```markdown
 # alp-plugin
 
-Personal Claude Code / Codex plugin, chuyển đổi từ claudekit-engineer.
+Personal Claude Code / Codex plugin, chuyển đổi từ anhlpkit-engineer.
 
 ## Structure
 
@@ -282,7 +282,7 @@ description: <khi nào Claude nên dùng skill này — trigger conditions>
 
 ## Source
 
-Dựa trên https://github.com/gnoah1379/claudekit-engineer
+Dựa trên https://github.com/gnoah1379/anhlpkit-engineer
 ```
 
 - [ ] **Step 4: Tạo `package.json`**
@@ -333,7 +333,7 @@ node_modules/
 
 ```powershell
 git add .
-git commit -m "feat: initial alp-plugin from claudekit-engineer"
+git commit -m "feat: initial alp-plugin from anhlpkit-engineer"
 ```
 
 Expected: Commit thành công với số files
@@ -485,4 +485,4 @@ Expected: Thấy gợi ý modularization trong response
 
 **Hook không chạy:** Kiểm tra `hooks/hooks.json` tồn tại và `scout-block.js` có thể chạy với `node D:\Projects\alp-plugin\hooks\scout-block.js`.
 
-**Repo không clone được:** Fork từ https://github.com/gnoah1379/claudekit-engineer rồi clone từ fork của bạn.
+**Repo không clone được:** Fork từ https://github.com/gnoah1379/anhlpkit-engineer rồi clone từ fork của bạn.

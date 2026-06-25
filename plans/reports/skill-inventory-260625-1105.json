@@ -1,0 +1,2140 @@
+[
+  {
+    "path": "skills/agent-browser/agent-browser/SKILL.md",
+    "depth": 2,
+    "name": "alp:agent-browser",
+    "description": "AI-optimized browser automation CLI with context-efficient snapshots. Use for long autonomous sessions, self-verifying workflows, video recording, and cloud browser testing (Browserbase).",
+    "refs": 2,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "browserbase",
+      "git",
+      "mcp",
+      "npm",
+      "playwright",
+      "puppeteer"
+    ]
+  },
+  {
+    "path": "skills/agent-browser/SKILL.md",
+    "depth": 1,
+    "name": "agent-browser",
+    "description": "AI-optimized browser automation CLI with context-efficient snapshots. Use for long autonomous sessions, self-verifying workflows, video recording, and cloud browser testing (Browserbase).",
+    "refs": 2,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "browserbase",
+      "git",
+      "mcp",
+      "npm",
+      "playwright",
+      "puppeteer"
+    ]
+  },
+  {
+    "path": "skills/ai-artist/ai-artist/SKILL.md",
+    "depth": 2,
+    "name": "alp:ai-artist",
+    "description": "Generate images via Nano Banana with 129 curated prompts. Mandatory validation interview refines style/mood/colors (use --skip to bypass). 3 modes: search, creative, wild. Styles: Ukiyo-e, Bento grid, cyberpunk, cinematic, vintage patent.",
+    "refs": 12,
+    "scripts": 4,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "python"
+    ]
+  },
+  {
+    "path": "skills/ai-artist/SKILL.md",
+    "depth": 1,
+    "name": "ai-artist",
+    "description": "Generate images via Nano Banana with 129 curated prompts. Mandatory validation interview refines style/mood/colors (use --skip to bypass). 3 modes: search, creative, wild. Styles: Ukiyo-e, Bento grid, cyberpunk, cinematic, vintage patent.",
+    "refs": 12,
+    "scripts": 4,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "python"
+    ]
+  },
+  {
+    "path": "skills/ai-multimodal/ai-multimodal/SKILL.md",
+    "depth": 2,
+    "name": "alp:ai-multimodal",
+    "description": "Analyze images/audio/video with Gemini API (better vision than Claude). Generate images (Imagen 4, Nano Banana 2, MiniMax), videos (Veo 3, Hailuo), speech (MiniMax TTS), music (MiniMax). Use for vision analysis, transcription, OCR, design extraction, multimodal AI.",
+    "refs": 7,
+    "scripts": 15,
+    "templates": 0,
+    "requirements": [
+      {
+        "file": "scripts/requirements.txt",
+        "deps": [
+          "google-genai>=0.1.0",
+          "pypdf>=4.0.0",
+          "python-docx>=1.0.0",
+          "docx2pdf>=0.1.8  # Windows only, optional on Linux/macOS",
+          "markdown>=3.5.0",
+          "Pillow>=10.0.0",
+          "python-dotenv>=1.0.0",
+          "pytest>=8.0.0",
+          "pytest-cov>=4.1.0",
+          "pytest-mock>=3.12.0"
+        ]
+      },
+      {
+        "file": "scripts/tests/requirements.txt",
+        "deps": [
+          "google-genai>=0.2.0",
+          "python-dotenv>=1.0.0",
+          "pillow>=10.0.0",
+          "pypdf>=3.0.0",
+          "markdown>=3.5",
+          "pytest>=7.4.0",
+          "pytest-cov>=4.1.0",
+          "pytest-mock>=3.12.0"
+        ]
+      }
+    ],
+    "packages": [],
+    "ext_mentions": [
+      "ffmpeg",
+      "gemini",
+      "google-genai",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/ai-multimodal/SKILL.md",
+    "depth": 1,
+    "name": "ai-multimodal",
+    "description": "Analyze images/audio/video with Gemini API (better vision than Claude). Generate images (Imagen 4), videos (Veo 3). Use for vision analysis, transcription, OCR, design extraction, multimodal AI.",
+    "refs": 6,
+    "scripts": 9,
+    "templates": 0,
+    "requirements": [
+      {
+        "file": "scripts/requirements.txt",
+        "deps": [
+          "google-genai>=0.1.0",
+          "pypdf>=4.0.0",
+          "python-docx>=1.0.0",
+          "docx2pdf>=0.1.8  # Windows only, optional on Linux/macOS",
+          "markdown>=3.5.0",
+          "Pillow>=10.0.0",
+          "python-dotenv>=1.0.0",
+          "pytest>=8.0.0",
+          "pytest-cov>=4.1.0",
+          "pytest-mock>=3.12.0"
+        ]
+      },
+      {
+        "file": "scripts/tests/requirements.txt",
+        "deps": [
+          "google-genai>=0.2.0",
+          "python-dotenv>=1.0.0",
+          "pillow>=10.0.0",
+          "pypdf>=3.0.0",
+          "markdown>=3.5",
+          "pytest>=7.4.0",
+          "pytest-cov>=4.1.0",
+          "pytest-mock>=3.12.0"
+        ]
+      }
+    ],
+    "packages": [],
+    "ext_mentions": [
+      "ffmpeg",
+      "gemini",
+      "google-genai",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/ask/SKILL.md",
+    "depth": 1,
+    "name": "alp:ask",
+    "description": "Answer technical and architectural questions with expert consultation.",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": []
+  },
+  {
+    "path": "skills/backend-development/backend-development/SKILL.md",
+    "depth": 2,
+    "name": "alp:backend-development",
+    "description": "Build backends with Node.js, Python, Go (NestJS, FastAPI, Django). Use for REST/GraphQL/gRPC APIs, auth (OAuth, JWT), databases, microservices, security (OWASP), Docker/K8s.",
+    "refs": 11,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "docker",
+      "gh",
+      "mongodb",
+      "node",
+      "postgres",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/backend-development/SKILL.md",
+    "depth": 1,
+    "name": "backend-development",
+    "description": "Build backends with Node.js, Python, Go (NestJS, FastAPI, Django). Use for REST/GraphQL/gRPC APIs, auth (OAuth, JWT), databases, microservices, security (OWASP), Docker/K8s.",
+    "refs": 11,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "docker",
+      "gh",
+      "mongodb",
+      "node",
+      "postgres",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/better-auth/better-auth/SKILL.md",
+    "depth": 2,
+    "name": "alp:better-auth",
+    "description": "Add authentication with Better Auth (TypeScript). Use for email/password, OAuth providers (Google, GitHub), 2FA/MFA, passkeys/WebAuthn, sessions, RBAC, rate limiting.",
+    "refs": 4,
+    "scripts": 3,
+    "templates": 0,
+    "requirements": [
+      {
+        "file": "scripts/requirements.txt",
+        "deps": [
+          "pytest>=8.0.0",
+          "pytest-cov>=4.1.0",
+          "pytest-mock>=3.12.0"
+        ]
+      }
+    ],
+    "packages": [],
+    "ext_mentions": [
+      "git",
+      "npm",
+      "npx",
+      "pnpm"
+    ]
+  },
+  {
+    "path": "skills/better-auth/SKILL.md",
+    "depth": 1,
+    "name": "better-auth",
+    "description": "Add authentication with Better Auth (TypeScript). Use for email/password, OAuth providers (Google, GitHub), 2FA/MFA, passkeys/WebAuthn, sessions, RBAC, rate limiting.",
+    "refs": 4,
+    "scripts": 3,
+    "templates": 0,
+    "requirements": [
+      {
+        "file": "scripts/requirements.txt",
+        "deps": [
+          "pytest>=8.0.0",
+          "pytest-cov>=4.1.0",
+          "pytest-mock>=3.12.0"
+        ]
+      }
+    ],
+    "packages": [],
+    "ext_mentions": [
+      "git",
+      "npm",
+      "npx",
+      "pnpm"
+    ]
+  },
+  {
+    "path": "skills/bootstrap/SKILL.md",
+    "depth": 1,
+    "name": "alp:bootstrap",
+    "description": "Bootstrap new projects with research, tech stack, design, planning, and implementation. Modes: full (interactive), auto (default), fast (skip research), parallel (multi-agent).",
+    "refs": 5,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "git",
+      "stripe"
+    ]
+  },
+  {
+    "path": "skills/brainstorm/brainstorm/SKILL.md",
+    "depth": 2,
+    "name": "alp:brainstorm",
+    "description": "Brainstorm solutions with trade-off analysis and brutal honesty. Use for ideation, architecture decisions, technical debates, feature exploration, feasibility assessment, design discussions.",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": []
+  },
+  {
+    "path": "skills/brainstorm/SKILL.md",
+    "depth": 1,
+    "name": "brainstorm",
+    "description": "Brainstorm solutions with trade-off analysis and brutal honesty. Use for ideation, architecture decisions, technical debates, feature exploration, feasibility assessment, design discussions.",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": []
+  },
+  {
+    "path": "skills/chrome-devtools/chrome-devtools/SKILL.md",
+    "depth": 2,
+    "name": "alp:chrome-devtools",
+    "description": "Automate browsers with Puppeteer CLI scripts and persistent sessions. Use for screenshots, performance analysis, network monitoring, web scraping, form automation, JavaScript debugging.",
+    "refs": 3,
+    "scripts": 25,
+    "templates": 0,
+    "requirements": [],
+    "packages": [
+      {
+        "file": "scripts/package.json",
+        "deps": [
+          "debug@^4.4.0",
+          "puppeteer@^24.15.0",
+          "sharp@^0.33.5",
+          "yargs@^17.7.2"
+        ]
+      }
+    ],
+    "ext_mentions": [
+      "gh",
+      "git",
+      "imagemagick",
+      "magick",
+      "node",
+      "npm",
+      "npx",
+      "puppeteer",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/chrome-devtools/SKILL.md",
+    "depth": 1,
+    "name": "chrome-devtools",
+    "description": "Automate browsers with Puppeteer CLI scripts and persistent sessions. Use for screenshots, performance analysis, network monitoring, web scraping, form automation, JavaScript debugging.",
+    "refs": 3,
+    "scripts": 25,
+    "templates": 0,
+    "requirements": [],
+    "packages": [
+      {
+        "file": "scripts/package.json",
+        "deps": [
+          "debug@^4.4.0",
+          "puppeteer@^24.15.0",
+          "sharp@^0.33.5",
+          "yargs@^17.7.2"
+        ]
+      }
+    ],
+    "ext_mentions": [
+      "gh",
+      "imagemagick",
+      "magick",
+      "node",
+      "npm",
+      "npx",
+      "puppeteer",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/alp-autoresearch/SKILL.md",
+    "depth": 1,
+    "name": "alp:autoresearch",
+    "description": "Autonomous iterative optimization loop — run N iterations against a mechanical metric, learn from git history, auto-keep/discard changes. Use for improving measurable metrics (coverage, performance, bundle size, etc.) through repeated experimentation.",
+    "refs": 5,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "git",
+      "node",
+      "npx"
+    ]
+  },
+  {
+    "path": "skills/alp-debug/SKILL.md",
+    "depth": 1,
+    "name": "alp:debug",
+    "description": "Debug systematically with root cause analysis before fixes. Use for bugs, test failures, unexpected behavior, performance issues, call stack tracing, multi-layer validation, log analysis, CI/CD failures, database diagnostics, system investigation.",
+    "refs": 10,
+    "scripts": 2,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "git",
+      "mcp",
+      "postgres",
+      "repomix"
+    ]
+  },
+  {
+    "path": "skills/alp-loop/SKILL.md",
+    "depth": 1,
+    "name": "alp:loop",
+    "description": "Autonomous iterative optimization loop — run N iterations against a mechanical metric, learn from git history, auto-keep/discard changes. Use for improving measurable metrics (coverage, performance, bundle size, etc.) through repeated experimentation.",
+    "refs": 5,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "git",
+      "node",
+      "npx"
+    ]
+  },
+  {
+    "path": "skills/alp-plan/SKILL.md",
+    "depth": 1,
+    "name": "alp:plan",
+    "description": "Plan implementations, design architectures, create technical roadmaps with detailed phases. Use for feature planning, system design, solution architecture, implementation strategy, phase documentation.",
+    "refs": 13,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "node"
+    ]
+  },
+  {
+    "path": "skills/alp-predict/SKILL.md",
+    "depth": 1,
+    "name": "alp:predict",
+    "description": "5 expert personas debate proposed changes before implementation. Catches architectural, security, performance, and UX issues early. Use before major features or risky changes.",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh"
+    ]
+  },
+  {
+    "path": "skills/alp-scenario/SKILL.md",
+    "depth": 1,
+    "name": "alp:scenario",
+    "description": "Generate comprehensive edge cases and test scenarios by decomposing features across 12 dimensions. Use before implementation or testing to catch issues early.",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh"
+    ]
+  },
+  {
+    "path": "skills/alp-security/SKILL.md",
+    "depth": 1,
+    "name": "alp:security",
+    "description": "STRIDE + OWASP-based security audit with optional auto-fix. Scans code for vulnerabilities, categorizes by severity, and can iteratively fix findings using alp:autoresearch pattern.",
+    "refs": 1,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "node",
+      "npm",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/code-review/code-review/SKILL.md",
+    "depth": 2,
+    "name": "alp:code-review",
+    "description": "Review code quality with adversarial rigor. Supports input modes: pending changes, PR number, commit hash, codebase scan. Always-on red-team analysis finds security holes, false assumptions, and failure modes.",
+    "refs": 14,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "git"
+    ]
+  },
+  {
+    "path": "skills/code-review/SKILL.md",
+    "depth": 1,
+    "name": "code-review",
+    "description": "Review code quality, receive feedback with technical rigor, verify completion claims. Use before PRs, after implementing features, when claiming task completion. Includes scout-based edge case detection.",
+    "refs": 4,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "git"
+    ]
+  },
+  {
+    "path": "skills/coding-level/SKILL.md",
+    "depth": 1,
+    "name": "alp:coding-level",
+    "description": "Set coding experience level for tailored explanations and output format.",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": []
+  },
+  {
+    "path": "skills/context-engineering/context-engineering/SKILL.md",
+    "depth": 2,
+    "name": "alp:context-engineering",
+    "description": ">-",
+    "refs": 10,
+    "scripts": 3,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh"
+    ]
+  },
+  {
+    "path": "skills/context-engineering/SKILL.md",
+    "depth": 1,
+    "name": "context-engineering",
+    "description": ">-",
+    "refs": 10,
+    "scripts": 3,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh"
+    ]
+  },
+  {
+    "path": "skills/cook/cook/SKILL.md",
+    "depth": 2,
+    "name": "alp:cook",
+    "description": "ALWAYS activate this skill before implementing EVERY feature, plan, or fix.",
+    "refs": 4,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "git",
+      "node"
+    ]
+  },
+  {
+    "path": "skills/cook/SKILL.md",
+    "depth": 1,
+    "name": "cook",
+    "description": "ALWAYS activate this skill before implementing EVERY feature, plan, or fix.",
+    "refs": 4,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "git"
+    ]
+  },
+  {
+    "path": "skills/copywriting/copywriting/SKILL.md",
+    "depth": 2,
+    "name": "alp:copywriting",
+    "description": "Conversion copywriting formulas, headline templates, email copy patterns, landing page structures, CTA optimization, and writing style extraction. Activate for writing high-converting copy, crafting headlines, email campaigns, landing pages, or applying custom writing styles from assets/writing-styles/ directory.",
+    "refs": 12,
+    "scripts": 1,
+    "templates": 1,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gemini",
+      "git",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/copywriting/SKILL.md",
+    "depth": 1,
+    "name": "copywriting",
+    "description": "Conversion copywriting formulas, headline templates, email copy patterns, landing page structures, CTA optimization, and writing style extraction. Activate for writing high-converting copy, crafting headlines, email campaigns, landing pages, or applying custom writing styles from assets/writing-styles/ directory.",
+    "refs": 12,
+    "scripts": 1,
+    "templates": 1,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gemini",
+      "git",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/databases/databases/SKILL.md",
+    "depth": 2,
+    "name": "alp:databases",
+    "description": "Design schemas, write queries for MongoDB and PostgreSQL. Use for database design, SQL/NoSQL queries, aggregation pipelines, indexes, migrations, replication, performance optimization, psql CLI.",
+    "refs": 8,
+    "scripts": 9,
+    "templates": 0,
+    "requirements": [
+      {
+        "file": "scripts/requirements.txt",
+        "deps": [
+          "pytest>=8.0.0",
+          "pytest-cov>=4.1.0",
+          "pytest-mock>=3.12.0"
+        ]
+      },
+      {
+        "file": "scripts/tests/requirements.txt",
+        "deps": [
+          "pytest>=7.0.0",
+          "pytest-cov>=4.0.0",
+          "pytest-mock>=3.10.0",
+          "mongomock>=4.1.0"
+        ]
+      }
+    ],
+    "packages": [],
+    "ext_mentions": [
+      "mongodb",
+      "postgres",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/databases/SKILL.md",
+    "depth": 1,
+    "name": "databases",
+    "description": "Design schemas, write queries for MongoDB and PostgreSQL. Use for database design, SQL/NoSQL queries, aggregation pipelines, indexes, migrations, replication, performance optimization, psql CLI.",
+    "refs": 8,
+    "scripts": 9,
+    "templates": 0,
+    "requirements": [
+      {
+        "file": "scripts/requirements.txt",
+        "deps": [
+          "pytest>=8.0.0",
+          "pytest-cov>=4.1.0",
+          "pytest-mock>=3.12.0"
+        ]
+      },
+      {
+        "file": "scripts/tests/requirements.txt",
+        "deps": [
+          "pytest>=7.0.0",
+          "pytest-cov>=4.0.0",
+          "pytest-mock>=3.10.0",
+          "mongomock>=4.1.0"
+        ]
+      }
+    ],
+    "packages": [],
+    "ext_mentions": [
+      "mongodb",
+      "postgres",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/deploy/SKILL.md",
+    "depth": 1,
+    "name": "alp:deploy",
+    "description": "Deploy projects to any platform with auto-detection. Use when user says \"deploy\", \"publish\", \"ship\", \"go live\", \"push to production\", \"host this app\", or mentions any hosting platform (Vercel, Netlify, Cloudflare, Railway, Fly.io, Render, Heroku, TOSE, Github Pages, AWS, GCP, Digital Ocean, Vultr, Coolify, Dokploy). Auto-detects deployment target from config files and docs/deployment.md.",
+    "refs": 16,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "cloudflare",
+      "docker",
+      "git",
+      "node",
+      "python",
+      "wrangler"
+    ]
+  },
+  {
+    "path": "skills/design/SKILL.md",
+    "depth": 1,
+    "name": "ckm:design",
+    "description": "Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini AI), corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js), banner design (22 styles, social/ads/web/print), icon design (15 styles, SVG, Gemini 3.1 Pro), social photos (HTML→screenshot, multi-platform). Actions: design logo, create CIP, generate mockups, build slides, design banner, generate icon, create social photos, social media images, brand identity, design system. Platforms: Facebook, Twitter, LinkedIn, YouTube, Instagram, Pinterest, TikTok, Threads, Google Ads.",
+    "refs": 18,
+    "scripts": 8,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gemini",
+      "google-genai",
+      "mcp",
+      "playwright",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/devops/devops/SKILL.md",
+    "depth": 2,
+    "name": "alp:devops",
+    "description": "Deploy to Cloudflare (Workers, R2, D1), Docker, GCP (Cloud Run, GKE), Kubernetes (kubectl, Helm). Use for serverless, containers, CI/CD, GitOps, security audit.",
+    "refs": 21,
+    "scripts": 6,
+    "templates": 0,
+    "requirements": [
+      {
+        "file": "scripts/requirements.txt",
+        "deps": [
+          "pytest>=8.0.0",
+          "pytest-cov>=4.1.0",
+          "pytest-mock>=3.12.0"
+        ]
+      },
+      {
+        "file": "scripts/tests/requirements.txt",
+        "deps": [
+          "pytest>=7.0.0",
+          "pytest-cov>=4.0.0",
+          "pytest-mock>=3.10.0"
+        ]
+      }
+    ],
+    "packages": [],
+    "ext_mentions": [
+      "cloudflare",
+      "docker",
+      "git",
+      "puppeteer",
+      "wrangler"
+    ]
+  },
+  {
+    "path": "skills/devops/SKILL.md",
+    "depth": 1,
+    "name": "devops",
+    "description": "Deploy to Cloudflare (Workers, R2, D1), Docker, GCP (Cloud Run, GKE), Kubernetes (kubectl, Helm). Use for serverless, containers, CI/CD, GitOps, security audit.",
+    "refs": 21,
+    "scripts": 6,
+    "templates": 0,
+    "requirements": [
+      {
+        "file": "scripts/requirements.txt",
+        "deps": [
+          "pytest>=8.0.0",
+          "pytest-cov>=4.1.0",
+          "pytest-mock>=3.12.0"
+        ]
+      },
+      {
+        "file": "scripts/tests/requirements.txt",
+        "deps": [
+          "pytest>=7.0.0",
+          "pytest-cov>=4.0.0",
+          "pytest-mock>=3.10.0"
+        ]
+      }
+    ],
+    "packages": [],
+    "ext_mentions": [
+      "cloudflare",
+      "docker",
+      "git",
+      "puppeteer",
+      "wrangler"
+    ]
+  },
+  {
+    "path": "skills/docs/SKILL.md",
+    "depth": 1,
+    "name": "alp:docs",
+    "description": "Analyze codebase and manage project documentation — init, update, summarize.",
+    "refs": 3,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh"
+    ]
+  },
+  {
+    "path": "skills/docs-seeker/docs-seeker/SKILL.md",
+    "depth": 2,
+    "name": "alp:docs-seeker",
+    "description": "Search library/framework documentation via llms.txt (context7.com). Use for API docs, GitHub repository analysis, technical documentation lookup, latest library features.",
+    "refs": 3,
+    "scripts": 8,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "git",
+      "node"
+    ]
+  },
+  {
+    "path": "skills/docs-seeker/SKILL.md",
+    "depth": 1,
+    "name": "docs-seeker",
+    "description": "Search library/framework documentation via llms.txt (context7.com). Use for API docs, GitHub repository analysis, technical documentation lookup, latest library features.",
+    "refs": 3,
+    "scripts": 8,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "git",
+      "node"
+    ]
+  },
+  {
+    "path": "skills/document-skills/document-skills/docx/SKILL.md",
+    "depth": 3,
+    "name": "alp:docx",
+    "description": "Create, edit, analyze .docx Word documents. Use for document creation, tracked changes, comments, formatting preservation, text extraction, template modification.",
+    "refs": 0,
+    "scripts": 8,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "node",
+      "npm",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/document-skills/document-skills/pdf/SKILL.md",
+    "depth": 3,
+    "name": "alp:pdf",
+    "description": "Extract text/tables, create, merge, split PDFs. Fill PDF forms programmatically. Use for PDF processing, generation, form filling, document analysis, batch operations.",
+    "refs": 0,
+    "scripts": 8,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "python"
+    ]
+  },
+  {
+    "path": "skills/document-skills/document-skills/pptx/SKILL.md",
+    "depth": 3,
+    "name": "alp:pptx",
+    "description": "Create, edit, analyze .pptx PowerPoint files. Use for presentations, slides, layouts, speaker notes, template modification, content extraction, slide generation.",
+    "refs": 0,
+    "scripts": 5,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "npm",
+      "playwright",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/document-skills/document-skills/xlsx/SKILL.md",
+    "depth": 3,
+    "name": "alp:xlsx",
+    "description": "Create, edit, analyze spreadsheets (.xlsx, .csv, .tsv). Use for Excel formulas, data analysis, visualization, formatting, pivot tables, charts, formula recalculation.",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "python"
+    ]
+  },
+  {
+    "path": "skills/document-skills/docx/SKILL.md",
+    "depth": 2,
+    "name": "docx",
+    "description": "Create, edit, analyze .docx Word documents. Use for document creation, tracked changes, comments, formatting preservation, text extraction, template modification.",
+    "refs": 0,
+    "scripts": 8,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "node",
+      "npm",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/document-skills/pdf/SKILL.md",
+    "depth": 2,
+    "name": "pdf",
+    "description": "Extract text/tables, create, merge, split PDFs. Fill PDF forms programmatically. Use for PDF processing, generation, form filling, document analysis, batch operations.",
+    "refs": 0,
+    "scripts": 8,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "python"
+    ]
+  },
+  {
+    "path": "skills/document-skills/pptx/SKILL.md",
+    "depth": 2,
+    "name": "pptx",
+    "description": "Create, edit, analyze .pptx PowerPoint files. Use for presentations, slides, layouts, speaker notes, template modification, content extraction, slide generation.",
+    "refs": 0,
+    "scripts": 5,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "npm",
+      "playwright",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/document-skills/xlsx/SKILL.md",
+    "depth": 2,
+    "name": "xlsx",
+    "description": "Create, edit, analyze spreadsheets (.xlsx, .csv, .tsv). Use for Excel formulas, data analysis, visualization, formatting, pivot tables, charts, formula recalculation.",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "python"
+    ]
+  },
+  {
+    "path": "skills/find-skills/find-skills/SKILL.md",
+    "depth": 2,
+    "name": "alp:find-skills",
+    "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "docker",
+      "gh",
+      "git",
+      "npx",
+      "playwright"
+    ]
+  },
+  {
+    "path": "skills/find-skills/SKILL.md",
+    "depth": 1,
+    "name": "find-skills",
+    "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "docker",
+      "gh",
+      "git",
+      "npx",
+      "playwright"
+    ]
+  },
+  {
+    "path": "skills/fix/fix/SKILL.md",
+    "depth": 2,
+    "name": "alp:fix",
+    "description": "ALWAYS activate this skill before fixing ANY bug, error, test failure, CI/CD issue, type error, lint, log error, UI issue, code problem.",
+    "refs": 16,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "git"
+    ]
+  },
+  {
+    "path": "skills/fix/SKILL.md",
+    "depth": 1,
+    "name": "fix",
+    "description": "ALWAYS activate this skill before fixing ANY bug, error, test failure, CI/CD issue, type error, lint, log error, UI issue, code problem.",
+    "refs": 13,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "git"
+    ]
+  },
+  {
+    "path": "skills/frontend-design/frontend-design/SKILL.md",
+    "depth": 2,
+    "name": "alp:frontend-design",
+    "description": "Create polished frontend interfaces from designs/screenshots/videos. Use for web components, 3D experiences, replicating UI designs, quick prototypes, immersive interfaces, avoiding AI slop.",
+    "refs": 28,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh"
+    ]
+  },
+  {
+    "path": "skills/frontend-design/SKILL.md",
+    "depth": 1,
+    "name": "frontend-design",
+    "description": "Create polished frontend interfaces from designs/screenshots/videos. Use for web components, 3D experiences, replicating UI designs, quick prototypes, immersive interfaces, avoiding AI slop.",
+    "refs": 22,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": []
+  },
+  {
+    "path": "skills/frontend-development/frontend-development/SKILL.md",
+    "depth": 2,
+    "name": "alp:frontend-development",
+    "description": "Build React/TypeScript frontends with modern patterns. Use for components, Suspense, lazy loading, useSuspenseQuery, MUI v7 styling, TanStack Router, performance optimization.",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": []
+  },
+  {
+    "path": "skills/frontend-development/SKILL.md",
+    "depth": 1,
+    "name": "frontend-dev-guidelines",
+    "description": "Build React/TypeScript frontends with modern patterns. Use for components, Suspense, lazy loading, useSuspenseQuery, MUI v7 styling, TanStack Router, performance optimization.",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": []
+  },
+  {
+    "path": "skills/git/git/SKILL.md",
+    "depth": 2,
+    "name": "alp:git",
+    "description": "Git operations with conventional commits. Use for staging, committing, pushing, PRs, merges. Auto-splits commits by type/scope. Security scans for secrets.",
+    "refs": 8,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "git"
+    ]
+  },
+  {
+    "path": "skills/git/SKILL.md",
+    "depth": 1,
+    "name": "git",
+    "description": "Git operations with conventional commits. Use for staging, committing, pushing, PRs, merges. Auto-splits commits by type/scope. Security scans for secrets.",
+    "refs": 8,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "git"
+    ]
+  },
+  {
+    "path": "skills/gkg/gkg/SKILL.md",
+    "depth": 2,
+    "name": "alp:gkg",
+    "description": "Semantic code analysis with GitLab Knowledge Graph. Use for go-to-definition, find-usages, impact analysis, architecture visualization. Supports Ruby, Java, Kotlin, Python, TypeScript/JavaScript.",
+    "refs": 4,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "git",
+      "mcp",
+      "python",
+      "repomix"
+    ]
+  },
+  {
+    "path": "skills/gkg/SKILL.md",
+    "depth": 1,
+    "name": "gkg",
+    "description": "Semantic code analysis with GitLab Knowledge Graph. Use for go-to-definition, find-usages, impact analysis, architecture visualization. Supports Ruby, Java, Kotlin, Python, TypeScript/JavaScript.",
+    "refs": 4,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "git",
+      "mcp",
+      "python",
+      "repomix"
+    ]
+  },
+  {
+    "path": "skills/google-adk-python/google-adk-python/SKILL.md",
+    "depth": 2,
+    "name": "alp:google-adk-python",
+    "description": "Build AI agents with Google ADK Python. Multi-agent systems, A2A protocol, MCP tools, workflow agents, state/memory, callbacks/plugins, Vertex AI deployment, evaluation.",
+    "refs": 7,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gemini",
+      "git",
+      "mcp",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/google-adk-python/SKILL.md",
+    "depth": 1,
+    "name": "google-adk-python",
+    "description": "Build AI agents with Google ADK Python. Multi-agent systems, A2A protocol, MCP tools, workflow agents, state/memory, callbacks/plugins, Vertex AI deployment, evaluation.",
+    "refs": 7,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gemini",
+      "git",
+      "mcp",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/journal/SKILL.md",
+    "depth": 1,
+    "name": "alp:journal",
+    "description": "Write journal entries analyzing recent changes and session reflections.",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": []
+  },
+  {
+    "path": "skills/kanban/SKILL.md",
+    "depth": 1,
+    "name": "alp:kanban",
+    "description": "AI agent orchestration board for task visualization and team coordination.",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "git",
+      "node"
+    ]
+  },
+  {
+    "path": "skills/llms/SKILL.md",
+    "depth": 1,
+    "name": "alp:llms",
+    "description": "Generate llms.txt files from docs or codebase scanning. Follows llmstxt.org spec. Use for LLM-friendly site indexes, documentation summaries, AI context optimization.",
+    "refs": 1,
+    "scripts": 1,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "python"
+    ]
+  },
+  {
+    "path": "skills/markdown-novel-viewer/SKILL.md",
+    "depth": 1,
+    "name": "markdown-novel-viewer",
+    "description": "View markdown files with calm, book-like reading experience via HTTP server. Use for long-form content, documentation preview, novel reading, report viewing, distraction-free reading.",
+    "refs": 0,
+    "scripts": 7,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "node",
+      "npm"
+    ]
+  },
+  {
+    "path": "skills/mcp-builder/SKILL.md",
+    "depth": 1,
+    "name": "mcp-builder",
+    "description": "Build MCP servers for LLM-external service integration. Use for FastMCP (Python), MCP SDK (Node/TypeScript), tool design, API integration, resource providers.",
+    "refs": 0,
+    "scripts": 4,
+    "templates": 0,
+    "requirements": [
+      {
+        "file": "scripts/requirements.txt",
+        "deps": [
+          "anthropic>=0.39.0",
+          "mcp>=1.1.0"
+        ]
+      }
+    ],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "git",
+      "mcp",
+      "node",
+      "npm",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/mcp-management/SKILL.md",
+    "depth": 1,
+    "name": "mcp-management",
+    "description": "Manage MCP servers - discover, analyze, execute tools/prompts/resources. Use for MCP integrations, intelligent tool selection, multi-server management, context-efficient capability discovery.",
+    "refs": 3,
+    "scripts": 6,
+    "templates": 0,
+    "requirements": [],
+    "packages": [
+      {
+        "file": "scripts/package.json",
+        "deps": [
+          "@modelcontextprotocol/sdk@^1.25.1",
+          "@types/node@^20.0.0",
+          "nodemon@^3.1.11",
+          "ts-node@^10.9.2",
+          "tsx@^4.20.6",
+          "typescript@^5.9.3"
+        ]
+      }
+    ],
+    "ext_mentions": [
+      "gemini",
+      "mcp",
+      "npm",
+      "npx",
+      "puppeteer"
+    ]
+  },
+  {
+    "path": "skills/media-processing/SKILL.md",
+    "depth": 1,
+    "name": "media-processing",
+    "description": "Process media with FFmpeg (video/audio), ImageMagick (images), RMBG (AI background removal). Use for encoding, format conversion, filters, thumbnails, batch processing, HLS/DASH streaming.",
+    "refs": 9,
+    "scripts": 12,
+    "templates": 0,
+    "requirements": [
+      {
+        "file": "scripts/requirements.txt",
+        "deps": [
+          "pytest>=8.0.0",
+          "pytest-cov>=4.1.0",
+          "pytest-mock>=3.12.0"
+        ]
+      },
+      {
+        "file": "scripts/tests/requirements.txt",
+        "deps": [
+          "pytest>=7.4.0",
+          "pytest-cov>=4.1.0"
+        ]
+      }
+    ],
+    "packages": [],
+    "ext_mentions": [
+      "ffmpeg",
+      "gh",
+      "imagemagick",
+      "magick",
+      "npm"
+    ]
+  },
+  {
+    "path": "skills/mermaidjs-v11/SKILL.md",
+    "depth": 1,
+    "name": "mermaidjs-v11",
+    "description": "Create diagrams with Mermaid.js v11 syntax. Use for flowcharts, sequence diagrams, class diagrams, ER diagrams, Gantt charts, state diagrams, architecture diagrams, timelines, user journeys.",
+    "refs": 5,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "docker",
+      "node",
+      "npm"
+    ]
+  },
+  {
+    "path": "skills/mintlify/SKILL.md",
+    "depth": 1,
+    "name": "mintlify",
+    "description": "Build and deploy documentation sites with Mintlify. Use when creating API docs, developer portals, or knowledge bases. Covers docs.json configuration, MDX components (Cards, Steps, Tabs, Accordions, CodeGroup, Callouts, Mermaid, View, Tiles, Tree, Badge, Banner, Color, Tooltips, Panel), page frontmatter, navigation structure (tabs, anchors, dropdowns, products, versions, languages), theming (7 themes), OpenAPI/AsyncAPI integration, AI features (llms.txt, MCP, skill.md), deployment (GitHub, GitLab, Vercel, Cloudflare, AWS), and CLI commands for local development and validation.",
+    "refs": 6,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "cloudflare",
+      "git",
+      "mcp",
+      "npm",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/mobile-development/mobile-development/SKILL.md",
+    "depth": 2,
+    "name": "alp:mobile-development",
+    "description": "Build mobile apps with React Native, Flutter, Swift/SwiftUI, Kotlin/Jetpack Compose. Use for iOS/Android, mobile UX, performance optimization, offline-first, app store deployment.",
+    "refs": 6,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "git",
+      "npm"
+    ]
+  },
+  {
+    "path": "skills/mobile-development/SKILL.md",
+    "depth": 1,
+    "name": "mobile-development",
+    "description": "Build mobile apps with React Native, Flutter, Swift/SwiftUI, Kotlin/Jetpack Compose. Use for iOS/Android, mobile UX, performance optimization, offline-first, app store deployment.",
+    "refs": 6,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "git",
+      "npm"
+    ]
+  },
+  {
+    "path": "skills/payment-integration/payment-integration/SKILL.md",
+    "depth": 2,
+    "name": "alp:payment-integration",
+    "description": "Integrate payments with SePay (VietQR), Polar, Stripe, Paddle (MoR subscriptions), Creem.io (licensing). Checkout, webhooks, subscriptions, QR codes, multi-provider orders.",
+    "refs": 35,
+    "scripts": 6,
+    "templates": 0,
+    "requirements": [],
+    "packages": [
+      {
+        "file": "scripts/package.json",
+        "deps": []
+      }
+    ],
+    "ext_mentions": [
+      "git",
+      "node",
+      "python",
+      "stripe"
+    ]
+  },
+  {
+    "path": "skills/payment-integration/SKILL.md",
+    "depth": 1,
+    "name": "payment-integration",
+    "description": "Integrate payments with SePay (VietQR), Polar, Stripe, Paddle (MoR subscriptions), Creem.io (licensing). Checkout, webhooks, subscriptions, QR codes, multi-provider orders.",
+    "refs": 35,
+    "scripts": 6,
+    "templates": 0,
+    "requirements": [],
+    "packages": [
+      {
+        "file": "scripts/package.json",
+        "deps": []
+      }
+    ],
+    "ext_mentions": [
+      "git",
+      "node",
+      "python",
+      "stripe"
+    ]
+  },
+  {
+    "path": "skills/plans-kanban/plans-kanban/SKILL.md",
+    "depth": 2,
+    "name": "alp:plans-kanban",
+    "description": "View plans dashboard with progress tracking and timeline visualization. Use for kanban boards, plan status overview, phase progress, milestone tracking, project visibility.",
+    "refs": 0,
+    "scripts": 8,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "node",
+      "npm"
+    ]
+  },
+  {
+    "path": "skills/plans-kanban/SKILL.md",
+    "depth": 1,
+    "name": "plans-kanban",
+    "description": "View plans dashboard with progress tracking and timeline visualization. Use for kanban boards, plan status overview, phase progress, milestone tracking, project visibility.",
+    "refs": 0,
+    "scripts": 8,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "node",
+      "npm"
+    ]
+  },
+  {
+    "path": "skills/preview/SKILL.md",
+    "depth": 1,
+    "name": "alp:preview",
+    "description": "View files/directories OR generate visual explanations, slides, diagrams (Markdown or self-contained HTML).",
+    "refs": 7,
+    "scripts": 0,
+    "templates": 4,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "git"
+    ]
+  },
+  {
+    "path": "skills/problem-solving/problem-solving/SKILL.md",
+    "depth": 2,
+    "name": "alp:problem-solving",
+    "description": "Apply systematic problem-solving techniques when stuck. Use for complexity spirals, innovation blocks, recurring patterns, assumption constraints, simplification cascades, scale uncertainty.",
+    "refs": 7,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh"
+    ]
+  },
+  {
+    "path": "skills/problem-solving/SKILL.md",
+    "depth": 1,
+    "name": "Problem-Solving Techniques",
+    "description": "Apply systematic problem-solving techniques when stuck. Use for complexity spirals, innovation blocks, recurring patterns, assumption constraints, simplification cascades, scale uncertainty.",
+    "refs": 7,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh"
+    ]
+  },
+  {
+    "path": "skills/project-management/SKILL.md",
+    "depth": 1,
+    "name": "alp:project-management",
+    "description": "Track progress, update plan statuses, manage Claude Tasks, generate reports, coordinate docs updates. Use for project oversight, status checks, plan completion, task hydration, cross-session continuity.",
+    "refs": 5,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": []
+  },
+  {
+    "path": "skills/project-organization/SKILL.md",
+    "depth": 1,
+    "name": "alp:project-organization",
+    "description": "Organize files, directories, and content structure in any project. Use when creating files, determining output paths, organizing existing assets, or standardizing project layout.",
+    "refs": 3,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "git",
+      "node",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/react-best-practices/react-best-practices/SKILL.md",
+    "depth": 2,
+    "name": "alp:react-best-practices",
+    "description": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh"
+    ]
+  },
+  {
+    "path": "skills/react-best-practices/SKILL.md",
+    "depth": 1,
+    "name": "vercel-react-best-practices",
+    "description": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh"
+    ]
+  },
+  {
+    "path": "skills/remotion/remotion/SKILL.md",
+    "depth": 2,
+    "name": "alp:remotion",
+    "description": "Best practices for Remotion - Video creation in React",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "node"
+    ]
+  },
+  {
+    "path": "skills/remotion/SKILL.md",
+    "depth": 1,
+    "name": "remotion-best-practices",
+    "description": "Best practices for Remotion - Video creation in React",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "node"
+    ]
+  },
+  {
+    "path": "skills/repomix/SKILL.md",
+    "depth": 1,
+    "name": "repomix",
+    "description": "Pack repositories into AI-friendly files with Repomix (XML, Markdown, plain text). Use for codebase snapshots, LLM context preparation, security audits, third-party library analysis.",
+    "refs": 2,
+    "scripts": 5,
+    "templates": 0,
+    "requirements": [
+      {
+        "file": "scripts/requirements.txt",
+        "deps": [
+          "pytest>=8.0.0",
+          "pytest-cov>=4.1.0",
+          "pytest-mock>=3.12.0"
+        ]
+      }
+    ],
+    "packages": [],
+    "ext_mentions": [
+      "gemini",
+      "git",
+      "mcp",
+      "npm",
+      "npx",
+      "python",
+      "repomix"
+    ]
+  },
+  {
+    "path": "skills/research/SKILL.md",
+    "depth": 1,
+    "name": "research",
+    "description": "Research technical solutions, analyze architectures, gather requirements thoroughly. Use for technology evaluation, best practices research, solution design, scalability/security/maintainability analysis.",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gemini",
+      "git"
+    ]
+  },
+  {
+    "path": "skills/retro/SKILL.md",
+    "depth": 1,
+    "name": "alp:retro",
+    "description": "Data-driven sprint retrospective. Gathers git metrics (commits, LOC, hotspots, churn), computes derived health indicators, and generates a structured markdown or HTML report. Use after sprints, weekly check-ins, or any review period.",
+    "refs": 2,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "git"
+    ]
+  },
+  {
+    "path": "skills/scout/scout/SKILL.md",
+    "depth": 2,
+    "name": "alp:scout",
+    "description": "Fast codebase scouting using parallel agents. Use for file discovery, task context gathering, quick searches across directories. Supports internal (Explore) and external (Gemini/OpenCode) agents.",
+    "refs": 3,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gemini"
+    ]
+  },
+  {
+    "path": "skills/scout/SKILL.md",
+    "depth": 1,
+    "name": "scout",
+    "description": "Fast codebase scouting using parallel agents. Use for file discovery, task context gathering, quick searches across directories. Supports internal (Explore) and external (Gemini/OpenCode) agents.",
+    "refs": 2,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gemini"
+    ]
+  },
+  {
+    "path": "skills/security-scan/SKILL.md",
+    "depth": 1,
+    "name": "alp:security-scan",
+    "description": "Scan codebase for security vulnerabilities, hardcoded secrets, dependency issues, and OWASP patterns. Use when asked to 'security scan', 'check for secrets', 'audit security', or before major releases.",
+    "refs": 2,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "git",
+      "node",
+      "npm",
+      "python",
+      "stripe"
+    ]
+  },
+  {
+    "path": "skills/sequential-thinking/sequential-thinking/SKILL.md",
+    "depth": 2,
+    "name": "alp:sequential-thinking",
+    "description": "Apply step-by-step analysis for complex problems with revision capability. Use for multi-step reasoning, hypothesis verification, adaptive planning, problem decomposition, course correction.",
+    "refs": 6,
+    "scripts": 2,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": []
+  },
+  {
+    "path": "skills/sequential-thinking/SKILL.md",
+    "depth": 1,
+    "name": "sequential-thinking",
+    "description": "Apply step-by-step analysis for complex problems with revision capability. Use for multi-step reasoning, hypothesis verification, adaptive planning, problem decomposition, course correction.",
+    "refs": 6,
+    "scripts": 2,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": []
+  },
+  {
+    "path": "skills/shader/SKILL.md",
+    "depth": 1,
+    "name": "shader",
+    "description": "Write GLSL fragment shaders for procedural graphics. Topics: shapes (SDF), patterns, noise (Perlin/simplex/cellular), fBm, colors (HSB/RGB), matrices, gradients, animations. Use for generative art, textures, visual effects, WebGL, Three.js shaders.",
+    "refs": 12,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": []
+  },
+  {
+    "path": "skills/ship/SKILL.md",
+    "depth": 1,
+    "name": "alp:ship",
+    "description": "Ship pipeline: merge main, test, review, commit, push, PR. Single command from feature branch to PR URL. Use for shipping official releases to main/master or beta releases to dev/beta branches.",
+    "refs": 3,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "git",
+      "node",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/shopify/SKILL.md",
+    "depth": 1,
+    "name": "shopify",
+    "description": "Build Shopify apps, extensions, themes with Shopify CLI. Use for GraphQL/REST APIs, Polaris UI, Liquid templates, checkout customization, webhooks, billing integration.",
+    "refs": 3,
+    "scripts": 3,
+    "templates": 0,
+    "requirements": [
+      {
+        "file": "scripts/requirements.txt",
+        "deps": [
+          "pytest>=8.0.0",
+          "pytest-cov>=4.1.0",
+          "pytest-mock>=3.12.0"
+        ]
+      }
+    ],
+    "packages": [],
+    "ext_mentions": [
+      "node",
+      "npm",
+      "python",
+      "shopify"
+    ]
+  },
+  {
+    "path": "skills/skill-creator/skill-creator/SKILL.md",
+    "depth": 2,
+    "name": "alp:skill-creator",
+    "description": "Create or update Claude skills with eval-driven iteration. Use for new skills, skill scripts, references, benchmark optimization, description optimization, eval testing, extending Claude's capabilities.",
+    "refs": 23,
+    "scripts": 11,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": []
+  },
+  {
+    "path": "skills/skill-creator/SKILL.md",
+    "depth": 1,
+    "name": "skill-creator",
+    "description": "Create or update Claude skills. Use for new skills, skill references, skill scripts, optimizing existing skills, extending Claude's capabilities.",
+    "refs": 10,
+    "scripts": 4,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "cloudflare",
+      "docker",
+      "gh",
+      "node",
+      "npx",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/stitch/SKILL.md",
+    "depth": 1,
+    "name": "alp:stitch",
+    "description": "AI design generation with Google Stitch. Generate UI designs from text prompts, export Tailwind/HTML/DESIGN.md, orchestrate design-to-code pipeline. Use for rapid prototyping, UI generation, design exploration.",
+    "refs": 4,
+    "scripts": 4,
+    "templates": 0,
+    "requirements": [],
+    "packages": [
+      {
+        "file": "scripts/package.json",
+        "deps": [
+          "@google/stitch-sdk@>=0.0.3 <1.0.0",
+          "tsx@^4.0.0"
+        ]
+      }
+    ],
+    "ext_mentions": [
+      "mcp",
+      "npm",
+      "npx"
+    ]
+  },
+  {
+    "path": "skills/tanstack/SKILL.md",
+    "depth": 1,
+    "name": "alp:tanstack",
+    "description": "Build with TanStack Start (full-stack React framework), TanStack Form (headless form management), and TanStack AI (AI streaming/chat). Use when creating TanStack projects, routes, server functions, forms, validation, or AI chat features.",
+    "refs": 3,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gemini",
+      "npm"
+    ]
+  },
+  {
+    "path": "skills/team/SKILL.md",
+    "depth": 1,
+    "name": "alp:team",
+    "description": "Orchestrate Agent Teams for parallel multi-session collaboration. Use for research, implementation, review, and debug workflows requiring independent teammates.",
+    "refs": 3,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "git"
+    ]
+  },
+  {
+    "path": "skills/template-skill/SKILL.md",
+    "depth": 1,
+    "name": "template-skill",
+    "description": "Replace with description of the skill and when Claude should use it.",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": []
+  },
+  {
+    "path": "skills/template-skill/template-skill/SKILL.md",
+    "depth": 2,
+    "name": "alp:template-skill",
+    "description": "Replace with description of the skill and when Claude should use it.",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": []
+  },
+  {
+    "path": "skills/test/SKILL.md",
+    "depth": 1,
+    "name": "alp:test",
+    "description": "Run unit, integration, e2e, and UI tests. Use for test execution, coverage analysis, build verification, visual regression, and QA reports.",
+    "refs": 3,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "npm",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/threejs/SKILL.md",
+    "depth": 1,
+    "name": "threejs",
+    "description": "Build 3D web apps with Three.js (WebGL/WebGPU). 556 searchable examples, 60 API classes, 20 use cases. Actions: create 3D scene, load model, add animation, implement physics, build VR/XR. Topics: GLTF loader, PBR materials, particle effects, shadows, post-processing, compute shaders, TSL. Integrations: WebGPU, physics engines, spatial audio.",
+    "refs": 20,
+    "scripts": 4,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "node",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/ui-styling/SKILL.md",
+    "depth": 1,
+    "name": "ui-styling",
+    "description": "Style UIs with shadcn/ui components (Radix UI + Tailwind CSS). Use for accessible components, themes, dark mode, responsive layouts, design systems, color customization.",
+    "refs": 7,
+    "scripts": 7,
+    "templates": 0,
+    "requirements": [
+      {
+        "file": "scripts/requirements.txt",
+        "deps": [
+          "pytest>=8.0.0",
+          "pytest-cov>=4.1.0",
+          "pytest-mock>=3.12.0"
+        ]
+      },
+      {
+        "file": "scripts/tests/requirements.txt",
+        "deps": [
+          "pytest>=7.4.0",
+          "pytest-cov>=4.1.0",
+          "pytest-mock>=3.11.1"
+        ]
+      }
+    ],
+    "packages": [],
+    "ext_mentions": [
+      "npm",
+      "npx",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/ui-styling/ui-styling/SKILL.md",
+    "depth": 2,
+    "name": "alp:ui-styling",
+    "description": "Style UIs with shadcn/ui components (Radix UI + Tailwind CSS). Use for accessible components, themes, dark mode, responsive layouts, design systems, color customization.",
+    "refs": 7,
+    "scripts": 7,
+    "templates": 0,
+    "requirements": [
+      {
+        "file": "scripts/requirements.txt",
+        "deps": [
+          "pytest>=8.0.0",
+          "pytest-cov>=4.1.0",
+          "pytest-mock>=3.12.0"
+        ]
+      },
+      {
+        "file": "scripts/tests/requirements.txt",
+        "deps": [
+          "pytest>=7.4.0",
+          "pytest-cov>=4.1.0",
+          "pytest-mock>=3.11.1"
+        ]
+      }
+    ],
+    "packages": [],
+    "ext_mentions": [
+      "npm",
+      "npx",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/ui-ux-pro-max/SKILL.md",
+    "depth": 1,
+    "name": "ui-ux-pro-max",
+    "description": "UI/UX design intelligence. 50 styles, 21 palettes, 50 font pairings, 20 charts, 9 stacks (React, Next.js, Vue, Svelte, SwiftUI, React Native, Flutter, Tailwind, shadcn/ui). Actions: plan, build, create, design, implement, review, fix, improve, optimize, enhance, refactor, check UI/UX code. Projects: website, landing page, dashboard, admin panel, e-commerce, SaaS, portfolio, blog, mobile app, .html, .tsx, .vue, .svelte. Elements: button, modal, navbar, sidebar, card, table, form, chart. Styles: glassmorphism, claymorphism, minimalism, brutalism, neumorphism, bento grid, dark mode, responsive, skeuomorphism, flat design. Topics: color palette, accessibility, animation, layout, typography, font pairing, spacing, hover, shadow, gradient. Integrations: shadcn/ui MCP for component search and examples.",
+    "refs": 0,
+    "scripts": 3,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "mcp",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/ui-ux-pro-max/ui-ux-pro-max/SKILL.md",
+    "depth": 2,
+    "name": "alp:ui-ux-pro-max",
+    "description": "UI/UX design intelligence for web and mobile. Includes 50+ styles, 161 color palettes, 57 font pairings, 161 product types, 99 UX guidelines, and 25 chart types across 10 stacks (React, Next.js, Vue, Svelte, SwiftUI, React Native, Flutter, Tailwind, shadcn/ui, and HTML/CSS). Actions: plan, build, create, design, implement, review, fix, improve, optimize, enhance, refactor, and check UI/UX code. Projects: website, landing page, dashboard, admin panel, e-commerce, SaaS, portfolio, blog, and mobile app. Elements: button, modal, navbar, sidebar, card, table, form, and chart. Styles: glassmorphism, claymorphism, minimalism, brutalism, neumorphism, bento grid, dark mode, responsive, skeuomorphism, and flat design. Topics: color systems, accessibility, animation, layout, typography, font pairing, spacing, interaction states, shadow, and gradient. Integrations: shadcn/ui MCP for component search and examples.",
+    "refs": 0,
+    "scripts": 3,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gh",
+      "mcp",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/use-mcp/SKILL.md",
+    "depth": 1,
+    "name": "alp:use-mcp",
+    "description": "Utilize MCP server tools with intelligent discovery and execution.",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "gemini",
+      "mcp"
+    ]
+  },
+  {
+    "path": "skills/watzup/SKILL.md",
+    "depth": 1,
+    "name": "alp:watzup",
+    "description": "Review recent changes and wrap up the current work session.",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": []
+  },
+  {
+    "path": "skills/web-design-guidelines/SKILL.md",
+    "depth": 1,
+    "name": "web-design-guidelines",
+    "description": "Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"check my site against best practices\".",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "git"
+    ]
+  },
+  {
+    "path": "skills/web-design-guidelines/web-design-guidelines/SKILL.md",
+    "depth": 2,
+    "name": "alp:web-design-guidelines",
+    "description": "Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"check my site against best practices\".",
+    "refs": 0,
+    "scripts": 0,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "git"
+    ]
+  },
+  {
+    "path": "skills/web-frameworks/SKILL.md",
+    "depth": 1,
+    "name": "web-frameworks",
+    "description": "Build with Next.js (App Router, RSC, SSR, ISR), Turborepo monorepos. Use for React apps, server rendering, build optimization, caching strategies, shared dependencies.",
+    "refs": 8,
+    "scripts": 8,
+    "templates": 0,
+    "requirements": [
+      {
+        "file": "scripts/requirements.txt",
+        "deps": [
+          "pytest>=8.0.0",
+          "pytest-cov>=4.1.0",
+          "pytest-mock>=3.12.0"
+        ]
+      },
+      {
+        "file": "scripts/tests/requirements.txt",
+        "deps": [
+          "pytest>=7.0.0",
+          "pytest-cov>=4.0.0",
+          "pytest-mock>=3.10.0"
+        ]
+      }
+    ],
+    "packages": [],
+    "ext_mentions": [
+      "git",
+      "node",
+      "npm",
+      "npx",
+      "python"
+    ]
+  },
+  {
+    "path": "skills/web-testing/SKILL.md",
+    "depth": 1,
+    "name": "web-testing",
+    "description": "Web testing with Playwright, Vitest, k6. E2E/unit/integration/load/security/visual/a11y testing. Use for test automation, flakiness, Core Web Vitals, mobile gestures, cross-browser.",
+    "refs": 24,
+    "scripts": 2,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "git",
+      "node",
+      "npm",
+      "npx",
+      "playwright"
+    ]
+  },
+  {
+    "path": "skills/web-testing/web-testing/SKILL.md",
+    "depth": 2,
+    "name": "alp:web-testing",
+    "description": "Web testing with Playwright, Vitest, k6. E2E/unit/integration/load/security/visual/a11y testing. Use for test automation, flakiness, Core Web Vitals, mobile gestures, cross-browser.",
+    "refs": 24,
+    "scripts": 2,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "git",
+      "node",
+      "npm",
+      "npx",
+      "playwright"
+    ]
+  },
+  {
+    "path": "skills/worktree/SKILL.md",
+    "depth": 1,
+    "name": "alp:worktree",
+    "description": "Create isolated git worktree for parallel development in monorepos.",
+    "refs": 0,
+    "scripts": 2,
+    "templates": 0,
+    "requirements": [],
+    "packages": [],
+    "ext_mentions": [
+      "git",
+      "node",
+      "npm",
+      "pnpm"
+    ]
+  }
+]

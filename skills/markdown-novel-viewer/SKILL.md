@@ -12,7 +12,7 @@ Background HTTP server rendering markdown files with calm, book-like reading exp
 **This skill requires npm dependencies.** Run one of the following:
 
 ```bash
-# Option 1: Install via ClaudeKit CLI (recommended)
+# Option 1: Install via AnhlpKit CLI (recommended)
 ck init  # Runs install.sh which handles all skills
 
 # Option 2: Manual installation

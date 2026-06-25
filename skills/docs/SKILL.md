@@ -1,9 +1,9 @@
 ---
-name: ck:docs
+name: alp:docs
 description: "Analyze codebase and manage project documentation — init, update, summarize."
 argument-hint: "init|update|summarize"
 metadata:
-  author: claudekit
+  author: anhlpkit
   version: "1.0.0"
 ---
 
@@ -11,7 +11,7 @@ metadata:
 
 Analyze codebase and manage project documentation through scouting, analysis, and structured doc generation.
 
-**IMPORTANT:** Invoke "/ck:project-organization" skill to organize the outputs.
+**IMPORTANT:** Invoke "/alp:project-organization" skill to organize the outputs.
 
 ## Default (No Arguments)
 
@@ -29,9 +29,9 @@ Present as options via `AskUserQuestion` with header "Documentation Operation", 
 
 | Subcommand | Reference | Purpose |
 |------------|-----------|---------|
-| `/ck:docs init` | `references/init-workflow.md` | Analyze codebase and create initial documentation |
-| `/ck:docs update` | `references/update-workflow.md` | Analyze codebase and update existing documentation |
-| `/ck:docs summarize` | `references/summarize-workflow.md` | Quick analysis and update of codebase summary |
+| `/alp:docs init` | `references/init-workflow.md` | Analyze codebase and create initial documentation |
+| `/alp:docs update` | `references/update-workflow.md` | Analyze codebase and update existing documentation |
+| `/alp:docs summarize` | `references/summarize-workflow.md` | Quick analysis and update of codebase summary |
 
 ## Routing
 

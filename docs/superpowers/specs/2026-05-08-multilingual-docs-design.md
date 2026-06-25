@@ -18,7 +18,7 @@ Add clear bilingual docs (English + Vietnamese) for basic plugin usage:
 - No plugin runtime changes
 
 ## Source References Used
-- `https://github.com/phucanh08/claudekit-engineer` docs/guide patterns
+- `https://github.com/phucanh08/anhlpkit-engineer` docs/guide patterns
 - Existing alp plugin structure and namespace (`/alp:*`)
 
 ## Final Structure

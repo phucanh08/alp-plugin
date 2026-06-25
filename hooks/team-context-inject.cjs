@@ -12,7 +12,7 @@ try {
   const fs = require('fs');
   const path = require('path');
   const os = require('os');
-  const { isHookEnabled } = require('./lib/ck-config-utils.cjs');
+  const { isHookEnabled } = require('./lib/alp-config-utils.cjs');
 
   if (!isHookEnabled('team-context-inject')) {
     process.exit(0);
@@ -66,7 +66,7 @@ function buildCkContext() {
   const ctx = [];
   const env = process.env;
 
-  if (env.CK_REPORTS_PATH) ctx.push(`Reports: ${env.CK_REPORTS_PATH}`);
+  if (env.ALP_REPORTS_PATH) ctx.push(`Reports: ${env.ALP_REPORTS_PATH}`);
   if (env.CK_PLANS_PATH) ctx.push(`Plans: ${env.CK_PLANS_PATH}`);
   if (env.CK_PROJECT_ROOT) ctx.push(`Project: ${env.CK_PROJECT_ROOT}`);
   if (env.CK_NAME_PATTERN) ctx.push(`Naming: ${env.CK_NAME_PATTERN}`);
@@ -154,7 +154,7 @@ function main() {
     process.exit(0);
   } catch (error) {
     // Fail-open: log to stderr, exit cleanly
-    if (process.env.CK_DEBUG) {
+    if (process.env.ALP_DEBUG) {
       console.error(`[team-context-inject] Error: ${error.message}`);
     }
     process.exit(0);

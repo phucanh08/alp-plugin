@@ -99,7 +99,7 @@ Context Window Usage: 67%
 
 **Data Sources:**
 - Usage limits: Anthropic OAuth API (`https://api.anthropic.com/api/oauth/usage`)
-- Context window: Statusline temp file (`/tmp/ck-context-{session_id}.json`)
+- Context window: Statusline temp file (`/tmp/alp-context-{session_id}.json`)
 
 ## Scripts
 

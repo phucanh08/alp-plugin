@@ -1,15 +1,15 @@
 ---
-name: Superpowers vs ClaudeKit Engineer Analysis
+name: Superpowers vs AnhlpKit Engineer Analysis
 description: Deep comparative analysis of Superpowers and CKE frameworks - strengths, weaknesses, learnings
 type: brainstorm-report
 date: 2026-03-15
 ---
 
-# Superpowers vs ClaudeKit Engineer (CKE) — Comparative Analysis
+# Superpowers vs AnhlpKit Engineer (CKE) — Comparative Analysis
 
 ## Executive Summary
 
-**Superpowers** (by Jesse Vincent / @obra) is an opinionated workflow-enforcement framework focused on disciplined software development via ~14 tightly-coupled skills. **ClaudeKit Engineer (CKE)** is a comprehensive productivity framework with 70+ skills, 14 agents, extensive hooks, and multi-platform support (Claude Code, OpenCode).
+**Superpowers** (by Jesse Vincent / @obra) is an opinionated workflow-enforcement framework focused on disciplined software development via ~14 tightly-coupled skills. **AnhlpKit Engineer (CKE)** is a comprehensive productivity framework with 70+ skills, 14 agents, extensive hooks, and multi-platform support (Claude Code, OpenCode).
 
 | Dimension | Superpowers | CKE |
 |-----------|-------------|-----|

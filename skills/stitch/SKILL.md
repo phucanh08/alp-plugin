@@ -1,5 +1,5 @@
 ---
-name: ck:stitch
+name: alp:stitch
 description: "AI design generation with Google Stitch. Generate UI designs from text prompts, export Tailwind/HTML/DESIGN.md, orchestrate design-to-code pipeline. Use for rapid prototyping, UI generation, design exploration."
 license: MIT
 allowed-tools:
@@ -9,7 +9,7 @@ allowed-tools:
   - Edit
 argument-hint: "[design prompt or action]"
 metadata:
-  author: claudekit
+  author: anhlpkit
   version: "1.0.0"
 ---
 
@@ -121,15 +121,15 @@ const editedScreen = await screen.edit("Make the header darker and add a search 
 
 ### Design-to-Code Flow
 
-1. **Check quota** — Run `stitch-quota.ts check`. If exhausted, suggest `ck:ui-ux-pro-max` fallback.
+1. **Check quota** — Run `stitch-quota.ts check`. If exhausted, suggest `alp:ui-ux-pro-max` fallback.
 2. **Generate** — Run `stitch-generate.ts` with user's design prompt
 3. **Review** — Show generated design image to user for feedback
 4. **Variants** (optional) — Generate alternatives if user wants exploration
 5. **Export** — Run `stitch-export.ts --format all` to get HTML + DESIGN.md
 6. **Implement** — Hand off exported artifacts to implementation skill:
-   - `ck:frontend-design` — React/Vue/Svelte components from Tailwind export
-   - `ck:ui-ux-pro-max` — Full page layouts with style guide integration
-   - `ck:ui-styling` — Design token extraction from DESIGN.md
+   - `alp:frontend-design` — React/Vue/Svelte components from Tailwind export
+   - `alp:ui-ux-pro-max` — Full page layouts with style guide integration
+   - `alp:ui-styling` — Design token extraction from DESIGN.md
 7. **Track quota** — Run `stitch-quota.ts increment`
 
 ### Handoff Protocol
@@ -144,9 +144,9 @@ See `references/design-to-code-pipeline.md` for detailed patterns and examples.
 ## Quota Management
 
 - 200 credits/day (standard mode), resets at midnight UTC
-- Local tracking via `~/.claudekit/.stitch-quota.json`
+- Local tracking via `~/.anhlpkit/.stitch-quota.json`
 - Warns when remaining credits < 20%
-- **Fallback:** When exhausted, use `ck:ui-ux-pro-max` for text-based design generation
+- **Fallback:** When exhausted, use `alp:ui-ux-pro-max` for text-based design generation
 
 See `references/quota-management.md` for strategies.
 

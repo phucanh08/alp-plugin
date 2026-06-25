@@ -1,9 +1,9 @@
 ---
-name: ck:kanban
+name: alp:kanban
 description: "AI agent orchestration board for task visualization and team coordination."
 argument-hint: "[dir]"
 metadata:
-  author: claudekit
+  author: anhlpkit
   version: "1.0.0"
 ---
 
@@ -13,9 +13,9 @@ Plans dashboard with progress tracking and timeline visualization.
 
 ## Usage
 
-- `/ck:kanban` - View dashboard for ./plans directory
-- `/ck:kanban <dir>` - View dashboard for specific directory
-- `/ck:kanban --stop` - Stop running server
+- `/alp:kanban` - View dashboard for ./plans directory
+- `/alp:kanban <dir>` - View dashboard for specific directory
+- `/alp:kanban --stop` - Stop running server
 
 ## Features
 
@@ -80,7 +80,7 @@ After starting, parse the JSON output and report:
 
 ## Future Plans
 
-The `/ck:kanban` command will evolve into **VibeKanban-inspired** AI agent orchestration:
+The `/alp:kanban` command will evolve into **VibeKanban-inspired** AI agent orchestration:
 
 ### Phase 1 (Current - MVP)
 - Task board with progress tracking
@@ -99,4 +99,4 @@ The `/ck:kanban` command will evolve into **VibeKanban-inspired** AI agent orche
 - Agent output streaming
 - Conflict detection
 
-Track progress: https://github.com/claudekit/claudekit-engineer/issues/189
+Track progress: https://github.com/anhlpkit/anhlpkit-engineer/issues/189

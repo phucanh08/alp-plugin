@@ -29,7 +29,7 @@ Fast, token-efficient codebase scouting using parallel agents to find files need
 
 ## Configuration
 
-Read from `.claude/.ck.json`:
+Read from `.claude/.alp.json`:
 - `gemini.model` - Gemini model (default: `gemini-3-flash-preview`)
 
 ## Workflow

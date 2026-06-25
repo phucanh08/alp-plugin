@@ -1,9 +1,9 @@
 ---
-name: ck:plans-kanban
+name: alp:plans-kanban
 description: View plans dashboard with progress tracking and timeline visualization. Use for kanban boards, plan status overview, phase progress, milestone tracking, project visibility.
 argument-hint: "[plans-dir]"
 metadata:
-  author: claudekit
+  author: anhlpkit
   version: "1.0.0"
 ---
 
@@ -16,7 +16,7 @@ Plans dashboard server with progress tracking and timeline visualization.
 **This skill requires npm dependencies.** Run one of the following:
 
 ```bash
-# Option 1: Install via ClaudeKit CLI (recommended)
+# Option 1: Install via AnhlpKit CLI (recommended)
 ck init  # Runs install.sh which handles all skills
 
 # Option 2: Manual installation
@@ -61,11 +61,11 @@ node .claude/skills/plans-kanban/scripts/server.cjs --stop
 
 ## Skill Invocation
 
-Use `/ck:kanban` for quick access:
+Use `/alp:kanban` for quick access:
 
 ```bash
-/ck:kanban plans/           # View plans dashboard
-/ck:kanban --stop           # Stop kanban server
+/alp:kanban plans/           # View plans dashboard
+/alp:kanban --stop           # Stop kanban server
 ```
 
 ## Features

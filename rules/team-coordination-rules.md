@@ -32,7 +32,7 @@ Rules for agents operating as teammates within an Agent Team.
 ## CK Stack Conventions
 
 ### Report Output
-- Save reports to `{CK_REPORTS_PATH}` (injected via hook, fallback: `plans/reports/`)
+- Save reports to `{ALP_REPORTS_PATH}` (injected via hook, fallback: `plans/reports/`)
 - Naming: `{type}-{date}-{slug}.md` where type = your role (researcher, reviewer, debugger)
 - Sacrifice grammar for concision. List unresolved questions at end.
 

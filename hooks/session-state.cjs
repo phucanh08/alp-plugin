@@ -12,7 +12,7 @@
 // Crash wrapper
 try {
   const fs = require('fs');
-  const { isHookEnabled } = require('./lib/ck-config-utils.cjs');
+  const { isHookEnabled } = require('./lib/alp-config-utils.cjs');
 
   if (!isHookEnabled('session-state')) process.exit(0);
 

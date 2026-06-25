@@ -1,10 +1,10 @@
 ---
-name: ck:ship
+name: alp:ship
 description: "Ship pipeline: merge main, test, review, commit, push, PR. Single command from feature branch to PR URL. Use for shipping official releases to main/master or beta releases to dev/beta branches."
 argument-hint: "[official|beta] [--skip-tests] [--skip-review] [--skip-journal] [--skip-docs] [--dry-run]"
 license: MIT
 metadata:
-  author: claudekit
+  author: anhlpkit
   version: "2.0.0"
 ---
 
@@ -65,8 +65,8 @@ Step 4:  Run tests        → Auto-detect test runner, run, check results
 Step 5:  Review           → Two-pass checklist review (critical + informational)
 Step 6:  Version bump     → Auto-detect version file, bump patch/minor
 Step 7:  Changelog        → Auto-generate from commits + diff
-Step 8:  Journal          → Write technical journal via /ck:journal
-Step 9:  Docs update      → Update project docs via /ck:docs update (official only)
+Step 8:  Journal          → Write technical journal via /alp:journal
+Step 9:  Docs update      → Update project docs via /alp:docs update (official only)
 Step 10: Commit           → Conventional commit with version/changelog
 Step 11: Push             → git push -u origin <branch>
 Step 12: Create PR        → gh pr create with structured body + linked issues
@@ -87,9 +87,9 @@ Step 12: Create PR        → gh pr create with structured body + linked issues
 
 ## Quick Start
 
-User says `/ck:ship` → run full pipeline → output PR URL.
-User says `/ck:ship beta` → ship to dev branch with lighter pipeline.
-User says `/ck:ship official` → ship to main with full docs + journal.
+User says `/alp:ship` → run full pipeline → output PR URL.
+User says `/alp:ship beta` → ship to dev branch with lighter pipeline.
+User says `/alp:ship official` → ship to main with full docs + journal.
 
 ## Output Format
 

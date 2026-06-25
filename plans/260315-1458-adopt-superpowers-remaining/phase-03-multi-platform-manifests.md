@@ -31,14 +31,14 @@ Add platform manifests for Gemini CLI and Cursor. Manifests are metadata-only JS
 
 ```json
 {
-  "name": "claudekit-engineer",
+  "name": "anhlpkit-engineer",
   "description": "Comprehensive AI-powered engineering framework with 70+ skills, 14 agents, and workflow automation",
   "version": "2.14.0",
   "author": {
-    "name": "ClaudeKit"
+    "name": "AnhlpKit"
   },
-  "homepage": "https://claudekit.com",
-  "repository": "https://github.com/claudekit/claudekit-engineer",
+  "homepage": "https://anhlpkit.com",
+  "repository": "https://github.com/anhlpkit/anhlpkit-engineer",
   "license": "MIT",
   "keywords": ["skills", "agents", "workflow", "engineering", "tdd", "debugging", "planning"]
 }
@@ -48,15 +48,15 @@ Add platform manifests for Gemini CLI and Cursor. Manifests are metadata-only JS
 
 ```json
 {
-  "name": "claudekit-engineer",
-  "displayName": "ClaudeKit Engineer",
+  "name": "anhlpkit-engineer",
+  "displayName": "AnhlpKit Engineer",
   "description": "AI engineering framework: 70+ skills, 14 agents, workflow automation",
   "version": "2.14.0",
   "author": {
-    "name": "ClaudeKit"
+    "name": "AnhlpKit"
   },
-  "homepage": "https://claudekit.com",
-  "repository": "https://github.com/claudekit/claudekit-engineer",
+  "homepage": "https://anhlpkit.com",
+  "repository": "https://github.com/anhlpkit/anhlpkit-engineer",
   "license": "MIT",
   "keywords": ["skills", "agents", "workflow", "engineering"],
   "skills": "./.claude/skills/",
@@ -70,7 +70,7 @@ Add platform manifests for Gemini CLI and Cursor. Manifests are metadata-only JS
 
 ```json
 {
-  "name": "claudekit-engineer",
+  "name": "anhlpkit-engineer",
   "description": "AI engineering framework with 70+ skills and 14 agents",
   "version": "2.14.0",
   "contextFileName": "GEMINI.md"

@@ -3,10 +3,10 @@
 Rapid design creation with minimal planning overhead.
 
 ## Prerequisites
-- Activate `ck:ui-ux-pro-max` skill first
+- Activate `alp:ui-ux-pro-max` skill first
 
 ## Initial Research
-Run `ck:ui-ux-pro-max` searches:
+Run `alp:ui-ux-pro-max` searches:
 ```bash
 python3 .claude/skills/ui-ux-pro-max/scripts/search.py "<product-type>" --domain product
 python3 .claude/skills/ui-ux-pro-max/scripts/search.py "<style-keywords>" --domain style
@@ -28,10 +28,10 @@ Use `ui-ux-designer` subagent directly:
 - Maintain quality despite speed
 
 ### 3. Generate Assets
-Use `ck:ai-multimodal` skill:
+Use `alp:ai-multimodal` skill:
 - Generate required visuals
 - Verify quality quickly
-- Use `ck:media-processing` for adjustments
+- Use `alp:media-processing` for adjustments
 
 ### 4. Report & Approve
 - Summarize changes briefly

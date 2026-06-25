@@ -19,7 +19,7 @@ try {
   const path = require("path");
   const os = require("os");
   const { execSync } = require("child_process");
-  const { isHookEnabled } = require('./lib/ck-config-utils.cjs');
+  const { isHookEnabled } = require('./lib/alp-config-utils.cjs');
   const { createHookTimer, logHookCrash } = require('./lib/hook-logger.cjs');
 
   // Early exit if hook disabled in config
@@ -28,7 +28,7 @@ try {
   }
 
 // Cache configuration
-const USAGE_CACHE_FILE = path.join(os.tmpdir(), "ck-usage-limits-cache.json");
+const USAGE_CACHE_FILE = path.join(os.tmpdir(), "alp-usage-limits-cache.json");
 const CACHE_TTL_MS = 60000; // 60 seconds
 const FETCH_INTERVAL_MS = 300000; // 5 minutes for PostToolUse
 const FETCH_INTERVAL_PROMPT_MS = 60000; // 1 minute for UserPromptSubmit
@@ -124,7 +124,7 @@ async function fetchAndCacheUsageLimits() {
 				"Content-Type": "application/json",
 				Authorization: `Bearer ${token}`,
 				"anthropic-beta": "oauth-2025-04-20",
-				"User-Agent": "claudekit-engineer/1.0",
+				"User-Agent": "anhlpkit-engineer/1.0",
 			},
 		});
 

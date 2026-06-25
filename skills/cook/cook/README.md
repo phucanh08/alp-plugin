@@ -12,7 +12,7 @@ cp -r cook ~/.claude/skills/
 ## Usage
 
 ```bash
-/ck:cook <natural language task OR plan path>
+/alp:cook <natural language task OR plan path>
 ```
 
 The skill automatically detects your intent and routes to the appropriate workflow.
@@ -21,25 +21,25 @@ The skill automatically detects your intent and routes to the appropriate workfl
 
 ```bash
 # Interactive mode (default)
-/ck:cook implement user authentication
+/alp:cook implement user authentication
 
 # Execute existing plan
-/ck:cook plans/260120-auth
+/alp:cook plans/260120-auth
 
 # Fast mode (skip research)
-/ck:cook quick fix for login bug
-/ck:cook implement feature --fast
+/alp:cook quick fix for login bug
+/alp:cook implement feature --fast
 
 # Auto mode (trust me bro)
-/ck:cook implement dashboard trust me
-/ck:cook implement feature --auto
+/alp:cook implement dashboard trust me
+/alp:cook implement feature --auto
 
 # Parallel mode (multi-agent)
-/ck:cook implement auth, payments, notifications
-/ck:cook implement feature --parallel
+/alp:cook implement auth, payments, notifications
+/alp:cook implement feature --parallel
 
 # No-test mode
-/ck:cook implement feature --no-test
+/alp:cook implement feature --no-test
 ```
 
 ## Modes

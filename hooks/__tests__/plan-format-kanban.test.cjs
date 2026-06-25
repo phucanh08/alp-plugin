@@ -114,7 +114,7 @@ status: pending
 `;
 
 before(() => {
-  tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'ck-kanban-test-'));
+  tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'alp-kanban-test-'));
 });
 
 after(() => {

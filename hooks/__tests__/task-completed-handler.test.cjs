@@ -157,7 +157,7 @@ describe('task-completed-handler.cjs', () => {
 
   describe('Completion logging', () => {
 
-    it('logs completion to report file when CK_REPORTS_PATH set', async () => {
+    it('logs completion to report file when ALP_REPORTS_PATH set', async () => {
       const tmpDir = path.join(os.tmpdir(), 'tc-hook-log-' + Date.now());
       const reportsDir = path.join(tmpDir, 'reports');
       fs.mkdirSync(tmpDir, { recursive: true });
@@ -169,7 +169,7 @@ describe('task-completed-handler.cjs', () => {
         await runHook({
           task_id: '1', task_subject: 'Logged task',
           teammate_name: 'worker-1', team_name: 'log-team'
-        }, { env: { HOME: tmpDir, CK_REPORTS_PATH: reportsDir } });
+        }, { env: { HOME: tmpDir, ALP_REPORTS_PATH: reportsDir } });
 
         const logFile = path.join(reportsDir, 'team-log-team-completions.md');
         assert.ok(fs.existsSync(logFile), 'Log file should exist');
@@ -181,7 +181,7 @@ describe('task-completed-handler.cjs', () => {
       }
     });
 
-    it('does not crash when CK_REPORTS_PATH is unset', async () => {
+    it('does not crash when ALP_REPORTS_PATH is unset', async () => {
       const tmpDir = path.join(os.tmpdir(), 'tc-hook-nolog-' + Date.now());
       fs.mkdirSync(tmpDir, { recursive: true });
       try {
@@ -192,7 +192,7 @@ describe('task-completed-handler.cjs', () => {
         const result = await runHook({
           task_id: '1', task_subject: 'A',
           teammate_name: 'w', team_name: 'nolog-team'
-        }, { env: { HOME: tmpDir, CK_REPORTS_PATH: '' } });
+        }, { env: { HOME: tmpDir, ALP_REPORTS_PATH: '' } });
 
         assert.strictEqual(result.exitCode, 0);
       } finally {

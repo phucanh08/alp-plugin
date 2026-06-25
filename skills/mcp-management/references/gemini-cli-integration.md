@@ -2,7 +2,7 @@
 
 ## Model Configuration
 
-Read model from `.claude/.ck.json`: `gemini.model` (default: `gemini-3-flash-preview`)
+Read model from `.claude/.alp.json`: `gemini.model` (default: `gemini-3-flash-preview`)
 
 ## ⚠️ CRITICAL: Use Stdin Piping, NOT -p Flag
 

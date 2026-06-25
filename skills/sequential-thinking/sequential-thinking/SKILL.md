@@ -1,10 +1,10 @@
 ---
-name: ck:sequential-thinking
+name: alp:sequential-thinking
 description: Apply step-by-step analysis for complex problems with revision capability. Use for multi-step reasoning, hypothesis verification, adaptive planning, problem decomposition, course correction.
 license: MIT
 argument-hint: "[problem to analyze step-by-step]"
 metadata:
-  author: claudekit
+  author: anhlpkit
   version: "1.0.0"
 ---
 

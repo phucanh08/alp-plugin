@@ -2,7 +2,7 @@
   "name": "stitch-scripts",
   "version": "1.0.0",
   "type": "module",
-  "description": "ClaudeKit Stitch skill SDK wrapper scripts",
+  "description": "AnhlpKit Stitch skill SDK wrapper scripts",
   "scripts": {
     "generate": "tsx stitch-generate.ts",
     "export": "tsx stitch-export.ts",

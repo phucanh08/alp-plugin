@@ -1,9 +1,9 @@
 ---
-name: ck:scout
+name: alp:scout
 description: "Fast codebase scouting using parallel agents. Use for file discovery, task context gathering, quick searches across directories. Supports internal (Explore) and external (Gemini/OpenCode) agents."
 argument-hint: "[search-target] [ext]"
 metadata:
-  author: claudekit
+  author: anhlpkit
   version: "1.0.0"
 ---
 
@@ -32,7 +32,7 @@ Fast, token-efficient codebase scouting using parallel agents to find files need
 
 ## Configuration
 
-Read from `.claude/.ck.json`:
+Read from `.claude/.alp.json`:
 - `gemini.model` - Gemini model (default: `gemini-3-flash-preview`)
 
 ## Workflow
@@ -67,7 +67,7 @@ Load appropriate reference based on decision tree:
 - Each subagent must return a detailed summary report to a main agent
 
 ### 5. Collect Results
-**IMPORTANT:** Invoke "/ck:project-organization" skill to organize the outputs.
+**IMPORTANT:** Invoke "/alp:project-organization" skill to organize the outputs.
 
 - Timeout: 3 minutes per agent (skip non-responders)
 - `TaskUpdate` completed tasks; log timed-out agents in report (skip if Task tools unavailable)

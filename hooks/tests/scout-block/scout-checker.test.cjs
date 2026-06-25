@@ -3,7 +3,7 @@
  * scout-checker.test.cjs - Integration tests for the scout-block facade
  *
  * Tests the full pipeline: command splitting → allowlist → path extraction → pattern matching.
- * Uses real .ckignore fixtures to validate end-to-end behavior.
+ * Uses real .alpignore fixtures to validate end-to-end behavior.
  *
  * Run: node --test .claude/hooks/tests/scout-block/scout-checker.test.cjs
  */
@@ -30,7 +30,7 @@ const {
 const FIXTURES_DIR = path.join(__dirname, 'fixtures');
 const DEFAULT_OPTS = {
   claudeDir: path.join(__dirname, '..', '..'),
-  ckignorePath: path.join(FIXTURES_DIR, 'ckignore-default.txt'),
+  alpignorePath: path.join(FIXTURES_DIR, 'alpignore-default.txt'),
   checkBroadPatterns: true
 };
 
@@ -451,16 +451,16 @@ describe('checkScoutBlock - fail-open behavior', () => {
     assert.ok(!r.blocked);
   });
 
-  it('uses defaults when ckignorePath missing', () => {
-    const r = checkScoutBlock({ toolName: 'Bash', toolInput: { command: 'ls node_modules' }, options: { ckignorePath: '/nonexistent/.ckignore' } });
+  it('uses defaults when alpignorePath missing', () => {
+    const r = checkScoutBlock({ toolName: 'Bash', toolInput: { command: 'ls node_modules' }, options: { alpignorePath: '/nonexistent/.alpignore' } });
     assert.ok(r.blocked, 'Should still block using DEFAULT_PATTERNS');
   });
 });
 
-describe('checkScoutBlock - custom .ckignore', () => {
+describe('checkScoutBlock - custom .alpignore', () => {
   const customOpts = {
     ...DEFAULT_OPTS,
-    ckignorePath: path.join(FIXTURES_DIR, 'ckignore-custom.txt')
+    alpignorePath: path.join(FIXTURES_DIR, 'alpignore-custom.txt')
   };
 
   it('blocks "out" directory with custom config', () => {
@@ -474,10 +474,10 @@ describe('checkScoutBlock - custom .ckignore', () => {
   });
 });
 
-describe('checkScoutBlock - negation .ckignore', () => {
+describe('checkScoutBlock - negation .alpignore', () => {
   const negOpts = {
     ...DEFAULT_OPTS,
-    ckignorePath: path.join(FIXTURES_DIR, 'ckignore-negation.txt')
+    alpignorePath: path.join(FIXTURES_DIR, 'alpignore-negation.txt')
   };
 
   it('blocks vendor but allows src/vendor', () => {

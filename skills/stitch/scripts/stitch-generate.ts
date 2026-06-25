@@ -38,7 +38,7 @@ function getPositionalArgs(): string[] {
 
 const prompt = getPositionalArgs()[0];
 const projectId =
-  getFlag("project") || process.env.STITCH_PROJECT_ID || "claudekit-default";
+  getFlag("project") || process.env.STITCH_PROJECT_ID || "anhlpkit-default";
 const deviceType = (getFlag("device") as "mobile" | "desktop" | "tablet") || undefined;
 const variantCount = getFlag("variants") ? parseInt(getFlag("variants")!, 10) : 0;
 
@@ -93,7 +93,7 @@ async function main() {
   } catch (error: unknown) {
     const err = error as { code?: string; message?: string };
     if (err.code === "RATE_LIMITED") {
-      console.error("[X] Daily quota exceeded. Try again tomorrow or use ck:ui-ux-pro-max fallback.");
+      console.error("[X] Daily quota exceeded. Try again tomorrow or use alp:ui-ux-pro-max fallback.");
     } else if (err.code === "AUTH_FAILED") {
       console.error("[X] Authentication failed. Check STITCH_API_KEY env var.");
     } else {

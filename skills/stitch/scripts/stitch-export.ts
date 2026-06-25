@@ -36,7 +36,7 @@ function getPositionalArgs(): string[] {
 
 const screenId = getPositionalArgs()[0];
 const projectId =
-  getFlag("project") || process.env.STITCH_PROJECT_ID || "claudekit-default";
+  getFlag("project") || process.env.STITCH_PROJECT_ID || "anhlpkit-default";
 const format = getFlag("format") || "all";
 const outputDir = getFlag("output") || "./stitch-exports";
 
